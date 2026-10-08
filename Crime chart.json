@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/Orange%20County%20Crime.csv"
+  },
+  "title": {
+    "text": "Combined Violent and Property Crime Offenses Known to Law Enforcement in Orange County, FL, 2004-2020"
+  },
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "mediumpurple"},
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal"},
+    "y": {"field": "Value", "type": "quantitative"}
+  },
+  "config": {}
+}
