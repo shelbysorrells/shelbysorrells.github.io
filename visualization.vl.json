@@ -18,7 +18,6 @@
     "url": "https://api.economicsobservatory.com/usa/rGWh?vega",
     "format": {"type": "json", "property": "data"}
 },
-  },
   "mark": {"type": "line", "color": "#d6355dee", "strokeWidth": "2"},
   "encoding": {
     "x": {
