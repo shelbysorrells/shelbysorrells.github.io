@@ -9,7 +9,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
   color: #333;
   line-height: 1.6;
   /* we want a white page, that's centered and not too wide */
-  background-color: #bedff8;
+  background-color: #FAF3E0;
   margin:0 auto;
   max-width: 800px;
   padding-top: 60px;
