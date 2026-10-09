@@ -15,9 +15,8 @@
   "background": "#ffffff",
   "view": {"fill": "#ffffff", "strokeOpacity": 0},
   "data": {
-    "url": "https://api.economicsobservatory.com/usa/rGWh?vega",
-    "format": {"type": "json", "property": "data"}
-},
+    "url": "renewables-usa.json"
+  },
   "mark": {"type": "line", "color": "#d6355dee", "strokeWidth": "2"},
   "encoding": {
     "x": {
