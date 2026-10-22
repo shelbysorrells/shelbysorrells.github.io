@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Violent Crime Rate, 2008\u20132023",
+    "subtitle": "Offenses per 100,000 U.S. residents | FBI/BJS",
+    "anchor": "start",
+    "fontSize": 14,
+    "subtitleFontSize": 12,
+    "color": "#0a0e75",
+    "subtitleColor": "#43208a"
+  },
+  "height": 300,
+  "width": "container",
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#ffffff",
+  "view": {"fill": "#ffffff", "strokeOpacity": 0},
+  "data": {"url": "us-violent-crime-rate.json"},
+  "mark": {"type": "line", "color": "#2E8B57", "strokeWidth": 2, "point": true},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "axis": {"title": "", "grid": false}},
+    "y": {"field": "rate", "type": "quantitative", "axis": {"title": "Rate per 100,000", "titleColor": "#122B39", "grid": false}}
+  },
+  "config": {}
+}
