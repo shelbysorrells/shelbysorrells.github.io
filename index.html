@@ -1,7 +1,5 @@
 <!DOCTYPE html>
  
- 
- 
 <html> 
     <!-- HTML is heirarchial: tags like this define elements on the page. 
     Each tag does something different. For example:
@@ -137,13 +135,29 @@
         </div>
     </section>
  
-    <!--
-    CC3 placeholder: the course requires 10 challenges total across the portfolio.
-    Add further sections here as new challenges are completed, following the same
-    pattern: a numbered <section class="challenge">, a chart-description <div> with
-    a title and short paragraph, a <figure> with a unique id, and a matching
-    vegaEmbed call in the script below.
-    -->
+    <section class="challenge">
+    <div class="challenge__num" aria-hidden="true">03</div>
+    <div class="challenge__body">
+        <h1>CC3: Policy Debate</h1>
+
+        <p>
+            Has reducing US imprisonment rates been accompanied by rising crime,
+            undermining the case for continued decarceration?
+        </p>
+
+        <figure id="Location6"></figure>
+        <p>
+            Imprisonment rates fell from 506 to 360 per 100,000 between 2008 and
+            2023 — a sustained, two-decade decline in incarceration.
+        </p>
+
+        <figure id="Location7"></figure>
+        <p>
+            Violent crime fell over the same period, from 463.6 to 385.6 per
+            100,000 — moving with imprisonment rates, not against them.
+        </p>
+    </div>
+</section>
  
  
     <script>
@@ -162,6 +176,12 @@
  
         let chart5 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartLine7.json";
         vegaEmbed('#Location5', chart5)
+
+        let chart6 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/imprisonmentRate.vl.json";
+        vegaEmbed('#Location6', chart6)
+
+        let chart7 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/violentCrimeRate.vl.json";
+        vegaEmbed('#Location7', chart7)
  
     </script>
 </body>
