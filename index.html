@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-
-<!-- This is a comment -->
-
-
+ 
+ 
+ 
 <html> 
     <!-- HTML is heirarchial: tags like this define elements on the page. 
     Each tag does something different. For example:
@@ -14,98 +10,160 @@
         - The <p> tag defines a paragraph
         - Tags appear as an opening <div> and closing </div> pair
     -->
-
-
+ 
+ 
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
 
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping to example3.css or another, and take a look at each example.css to see if you understand it-->
+ 
+ 
     <link rel="stylesheet" type="text/css" href="Example3.css">
     <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+ 
 
-
-    <!-- This is a link to the vega-lite packages which we're using to make graphs -->
     <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
-
-
+ 
+ 
     <style>
         /* CSS styles can be defined here, or in a separate CSS file */
         #chartGrid {
             display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        
+ 
+        .challenge {
+            margin-bottom: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+ 
+        .challenge__num {
+            font-size: 2em;
+            font-weight: 700;
+            color: #4B2E83;
+        }
+ 
+        .chart-description h3 {
+            margin-bottom: 4px;
+        }
+ 
+        .chart-description p {
+            margin-top: 0;
+        }
     </style>
 </head>
-
-
+ 
+ 
 <body> 
-
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-       
+ 
+    <h1 class="big" style="margin-bottom: 0px;">
         Shelby Sorrells
     </h1>
     <p style="margin-top: 0px; color: darkblue">
-       
-            <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a> | <a
+        <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a> | <a
             href="https://www.github.com/shelbysorrells">GitHub</a>
     </p>
-
-
-   
-    <section>
-        <div class="chart-description">
-            <h2>CC1:</h2>
-        </div>
-
-        <div id="chartGrid">
-            
+    <h3 class="small">
+        This is my portfolio for PP434 Automated Data Visualisation for Policymaking. It demonstrates the
+        tools and techniques covered in class, building toward my main project.
+    </h3>
+ 
+ 
+    <section class="challenge">
+        <div class="challenge__num" aria-hidden="true">01</div>
+        <div class="challenge__body">
+            <h1>CC1: Hosting a Live Website</h1>
+ 
+            <div class="chart-description">
+                <h3>Chart 1: ETH Price vs. Volume</h3>
+                <p>
+                    A live, auto-updating chart tracking Ether's price against trading volume. This
+                    demonstrates pulling in a continuously refreshed data feed and plotting two series
+                    together using separate axes.
+                </p>
+            </div>
             <figure id="Location1"></figure>
+ 
+            <div class="chart-description">
+                <h3>Chart 2: Inflation Across the G7</h3>
+                <p>
+                    A multi-line chart comparing inflation rates across four G7 countries over time,
+                    sourced from OECD data. This demonstrates plotting several comparable series on one
+                    chart to make cross-country trends easy to read at a glance.
+                </p>
+            </div>
             <figure id="Location2"></figure>
+ 
+            <div class="chart-description">
+                <h3>Chart 3: Bitcoin High/Low Trading Range</h3>
+                <p>
+                    A filled-range chart showing the gap between Bitcoin's daily high and low trading
+                    price. This demonstrates using a filled area between two lines to highlight volatility
+                    or spread, a technique I plan to adapt for showing variation across prison facilities
+                    in my main project.
+                </p>
+            </div>
             <figure id="Location5"></figure>
         </div>
     </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>CC2:</h2>
-        </div>
-
-        <div id="chartGrid">
-           
+ 
+    <section class="challenge">
+        <div class="challenge__num" aria-hidden="true">02</div>
+        <div class="challenge__body">
+            <h1>CC2: Building from an API</h1>
+ 
+            <div class="chart-description">
+                <h3>Chart 4: Renewable Energy Output in the US</h3>
+                <p>
+                    Annual renewable energy output (GWh) in the United States, sourced via the Economics
+                    Observatory API. Since the live API doesn't allow direct browser access, this chart
+                    runs from a cached snapshot of the API response stored in this repository — a common
+                    workaround for CORS restrictions on public data APIs.
+                </p>
+            </div>
             <figure id="Location3"></figure>
+ 
+            <div class="chart-description">
+                <h3>Chart 5: Combined Crime Offences in Orange County, FL (2004–2020)</h3>
+                <p>
+                    Combined violent and property crime offences known to law enforcement in Orange
+                    County, Florida. This chart draws on my undergraduate background in criminology and
+                    will inform the criminal justice framing of my main project.
+                </p>
+            </div>
             <figure id="Location4"></figure>
         </div>
     </section>
-
-
+ 
+    <!--
+    CC3 placeholder: the course requires 10 challenges total across the portfolio.
+    Add further sections here as new challenges are completed, following the same
+    pattern: a numbered <section class="challenge">, a chart-description <div> with
+    a title and short paragraph, a <figure> with a unique id, and a matching
+    vegaEmbed call in the script below.
+    -->
+ 
+ 
     <script>
-      
-
+ 
         let chart1 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartLine5.json";
-
-
-        vegaEmbed('#Location1', chart1) 
-        
-        let chart2 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartLine2.json"; 
+        vegaEmbed('#Location1', chart1)
+ 
+        let chart2 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartLine2.json";
         vegaEmbed('#Location2', chart2)
-
-         let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/visualization.vl.json";
-
+ 
+        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/visualization.vl.json";
         vegaEmbed('#Location3', chart3)
-
-
-         let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/Crime%20chart.json"; 
-
-
-        vegaEmbed('#Location4', chart4) 
-
+ 
+        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/Crime%20chart.json";
+        vegaEmbed('#Location4', chart4)
+ 
         let chart5 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartLine7.json";
-
         vegaEmbed('#Location5', chart5)
-
+ 
     </script>
+</body>
 </html>
+ 
