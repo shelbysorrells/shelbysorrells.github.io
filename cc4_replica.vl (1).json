@@ -4,8 +4,12 @@
     "text": "Wind and solar were EU's top power source in 2022 for the first time ever",
     "subtitle": "Share of electricity generation (%)",
     "anchor": "start",
-    "fontSize": 18,
+    "font": "Helvetica Neue, Arial, sans-serif",
+    "fontSize": 20,
+    "fontWeight": "normal",
+    "subtitleFont": "Helvetica Neue, Arial, sans-serif",
     "subtitleFontSize": 13,
+    "subtitleFontWeight": "normal",
     "color": "#1a1a1a",
     "subtitleColor": "#666666"
   },
@@ -93,28 +97,55 @@
       {"year": 2022, "source": "Bioenergy", "share": 6.2}
     ]
   },
-  "mark": {"type": "line"},
-  "encoding": {
-    "x": {"field": "year", "type": "quantitative", "title": null, "axis": {"grid": false, "format": "d", "values": [2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]}},
-    "y": {"field": "share", "type": "quantitative", "title": null, "axis": {"grid": true, "gridColor": "#eeeeee"}},
-    "color": {
-      "field": "source",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Wind and solar", "Nuclear", "Gas", "Coal", "Hydro", "Bioenergy"],
-        "range": ["#b0392b", "#1b2a4e", "#4a90d9", "#7f7f7f", "#bfbfbf", "#e5e5e5"]
-      },
-      "legend": {"title": null, "orient": "top", "direction": "horizontal", "columns": 6}
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2},
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative", "title": null, "axis": {"grid": false, "format": "d", "values": [2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]}},
+        "y": {"field": "share", "type": "quantitative", "title": null, "axis": {"grid": true, "gridColor": "#eeeeee"}},
+        "color": {
+          "field": "source",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Wind and solar", "Nuclear", "Gas", "Coal", "Hydro", "Bioenergy"],
+            "range": ["#b0392b", "#1b2a4e", "#4a90d9", "#7f7f7f", "#bfbfbf", "#e5e5e5"]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "horizontal",
+            "columns": 6,
+            "symbolType": "stroke",
+            "symbolStrokeWidth": 5,
+            "symbolSize": 400,
+            "labelColor": "#1a1a1a",
+            "labelFontWeight": "normal",
+            "labelFontSize": 14
+          }
+        }
+      }
     },
-    "size": {
-      "field": "source",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Wind and solar", "Nuclear", "Gas", "Coal", "Hydro", "Bioenergy"],
-        "range": [4, 1.5, 1.5, 1.5, 1.5, 1.5]
-      },
-      "legend": null
+    {
+      "transform": [{"filter": "datum.source === 'Wind and solar'"}],
+      "mark": {"type": "line", "strokeWidth": 4, "color": "#b0392b"},
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "share", "type": "quantitative"}
+      }
     }
-  },
-  "config": {}
+  ],
+  "config": {
+    "font": "Helvetica Neue, Arial, sans-serif",
+    "axis": {
+      "labelFont": "Helvetica Neue, Arial, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#444444",
+      "domainColor": "#cccccc",
+      "tickColor": "#cccccc"
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue, Arial, sans-serif",
+      "labelFontSize": 14
+    }
+  }
 }
