@@ -137,7 +137,7 @@
         "text": {"field": "source"},
         "color": {"field": "color", "type": "nominal", "scale": null, "legend": null}
       }
-    },
+    }
    
   ],
   "config": {}
