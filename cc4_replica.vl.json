@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Wind and solar became the EU's top electricity source in 2022",
+    "subtitle": "Shares of EU electricity generation by source, 2000-22, %",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1a1a1a",
+    "subtitleColor": "#666666"
+  },
+  "width": 500,
+  "height": 320,
+  "background": "#ffffff",
+  "data": {
+    "values": [
+      {"year": 2000, "source": "Wind and solar", "share": 2},
+      {"year": 2005, "source": "Wind and solar", "share": 4},
+      {"year": 2010, "source": "Wind and solar", "share": 8},
+      {"year": 2015, "source": "Wind and solar", "share": 15},
+      {"year": 2019, "source": "Wind and solar", "share": 18},
+      {"year": 2022, "source": "Wind and solar", "share": 22.3},
+
+      {"year": 2000, "source": "Gas", "share": 17},
+      {"year": 2005, "source": "Gas", "share": 20},
+      {"year": 2010, "source": "Gas", "share": 23},
+      {"year": 2015, "source": "Gas", "share": 18},
+      {"year": 2019, "source": "Gas", "share": 20},
+      {"year": 2022, "source": "Gas", "share": 19.9},
+
+      {"year": 2000, "source": "Nuclear", "share": 31},
+      {"year": 2005, "source": "Nuclear", "share": 29},
+      {"year": 2010, "source": "Nuclear", "share": 28},
+      {"year": 2015, "source": "Nuclear", "share": 26},
+      {"year": 2019, "source": "Nuclear", "share": 25},
+      {"year": 2022, "source": "Nuclear", "share": 21.9},
+
+      {"year": 2000, "source": "Coal", "share": 30},
+      {"year": 2005, "source": "Coal", "share": 28},
+      {"year": 2010, "source": "Coal", "share": 25},
+      {"year": 2015, "source": "Coal", "share": 22},
+      {"year": 2019, "source": "Coal", "share": 15},
+      {"year": 2022, "source": "Coal", "share": 16}
+    ]
+  },
+  "mark": {"type": "line", "point": true, "strokeWidth": 3},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": null, "axis": {"grid": false}},
+    "y": {"field": "share", "type": "quantitative", "title": null, "axis": {"grid": true, "gridColor": "#eeeeee"}},
+    "color": {
+      "field": "source",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Wind and solar", "Gas", "Nuclear", "Coal"],
+        "range": ["#2e7d5b", "#999999", "#7a4f9e", "#1a1a1a"]
+      },
+      "legend": {"title": null, "orient": "right"}
+    }
+  },
+  "config": {}
+}
