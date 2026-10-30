@@ -202,6 +202,20 @@
                 https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?api_key=hMkmtH8pLcGNkCFWmKkhztP7kqRPrbFbhhGdR9Bh&frequency=annual&data[0]=generation&facets[fueltypeid][]=SUN&facets[sectorid][]=98&sort[0][column]=period&sort[0][direction]=asc&length=5000
             </small>
         </p>
+
+     <figure id="Location11"></figure>
+<p>
+    Scraped Wikipedia's UK offshore wind tables via pandas. Main challenge
+    was merging eight differently-formatted tables into one tidy dataset
+    by project status.
+</p>
+<p>
+    Google Colab notebook:
+    <a href="https://colab.research.google.com/drive/1o-AJ6pCR2qaXKAEa98NUXiv1vxasC-ZP?usp=sharing">
+        View notebook
+    </a>
+</p>
+     
     </div>
 </section>
  
@@ -236,6 +250,9 @@
 
       let chart10 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc5_api_chart.vl.json";
 vegaEmbed('#Location10', chart10)
+
+     let chart11 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc5_scraper_chart.vl.json";
+vegaEmbed('#Location11', chart11)
  
     </script>
 </body>
