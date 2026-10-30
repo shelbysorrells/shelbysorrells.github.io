@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "US Solar Electricity Generation by Year (Live via EIA API)",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?api_key=hMkmtH8pLcGNkCFWmKkhztP7kqRPrbFbhhGdR9Bh&frequency=annual&data[0]=generation&facets[fueltypeid][]=SUN&facets[sectorid][]=98&sort[0][column]=period&sort[0][direction]=asc&length=5000",
+    "format": {"type": "json", "property": "response.data"}
+  },
+  "transform": [
+    {"calculate": "toNumber(datum.generation)", "as": "generation_num"}
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "period", "type": "ordinal", "title": "Year"},
+    "y": {"aggregate": "sum", "field": "generation_num", "type": "quantitative", "title": "Generation (thousand MWh)"}
+  }
+}
