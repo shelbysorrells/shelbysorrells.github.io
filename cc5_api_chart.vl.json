@@ -13,6 +13,10 @@
   "mark": "line",
   "encoding": {
     "x": {"field": "period", "type": "ordinal", "title": "Year"},
-    "y": {"aggregate": "sum", "field": "generation_num", "type": "quantitative", "title": "Generation (thousand MWh)"}
+    "y": {"aggregate": "sum", "field": "generation_num", "type": "quantitative", "title": "Generation (thousand MWh)"},
+    "tooltip": [
+      {"field": "period", "type": "ordinal", "title": "Year"},
+      {"aggregate": "sum", "field": "generation_num", "type": "quantitative", "title": "Generation (thousand MWh)", "format": ","}
+    ]
   }
 }
