@@ -1,0 +1,98 @@
+Name,status,capacity_mw
+Barrow,Operational,90.0
+Beatrice,Operational,10.0
+Beatrice extension,Operational,588.0
+Blyth Offshore Demonstrator,Operational,41.5
+Burbo Bank,Operational,90.0
+Burbo Bank Extension,Operational,258.0
+Dudgeon,Operational,402.0
+East Anglia One,Operational,714.0
+European Offshore Wind Deployment Centre,Operational,93.0
+Galloper,Operational,353.0
+Greater Gabbard,Operational,504.0
+Gunfleet Sands 1 & 2,Operational,172.0
+Gunfleet Sands 3 – Demonstration Project,Operational,12.0
+Gwynt y Môr,Operational,576.0
+Hornsea One,Operational,1218.0
+Hornsea Two,Operational,1386.0
+Humber Gateway,Operational,219.0
+Hywind Scotland,Operational,30.0
+Kentish Flats,Operational,140.0
+Kincardine,Operational,49.5
+Lincs,Operational,270.0
+London Array,Operational,630.0
+Lynn and Inner Dowsing,Operational,194.0
+Methil,Operational,7.0
+Moray East,Operational,950.0
+Moray West,Operational,882.0
+Neart Na Gaoithe,Operational,450.0
+North Hoyle,Operational,60.0
+Ormonde,Operational,150.0
+Race Bank,Operational,573.0
+Rampion,Operational,400.0
+Rhyl Flats,Operational,90.0
+Robin Rigg,Operational,180.0
+Scroby Sands,Operational,60.0
+Seagreen Phase 1,Operational,1400.0
+Sheringham Shoal,Operational,317.0
+Teesside,Operational,62.0
+Thanet,Operational,300.0
+Triton Knoll,Operational,857.0
+Walney,Operational,367.0
+Walney Extension,Operational,659.0
+Westermost Rough,Operational,210.0
+West of Duddon Sands,Operational,389.0
+Sofia Offshore Wind Farm,Under construction,
+Dogger Bank A,Under construction,
+Dogger Bank B,Under construction,
+Dogger Bank C,Under construction,
+East Anglia Three,Under construction,
+Inch Cape,Under construction,
+Hornsea Three,Under construction,
+Norfolk Boreas,Awarded contract,
+East Anglia Two,Awarded contract,
+Norfolk Vanguard West,Awarded contract,
+Norfolk Vanguard East,Awarded contract,
+Green Volt OWF,Proposed (AR6),
+Awel y Môr,Proposed (AR7),
+Berwick Bank Phase B,Proposed (AR7),
+Dogger Bank SE,Proposed (AR7),
+Dogger Bank SW,Proposed (AR7),
+Erebus,Proposed (AR7),
+Pentland Floating OWF,Proposed (AR7),
+East Anglia One North,Exploratory,
+Rampion 2 Extension,Exploratory,
+Five Estuaries,Exploratory,
+North Falls,Exploratory,
+Dogger Bank D,Exploratory,
+Berwick Bank,Exploratory,
+Seagreen Phase 1A,Exploratory,
+Outer Dowsing,Exploratory,
+Morecambe,Exploratory,
+Mona,Exploratory,
+Morven,Exploratory,
+Ossian,Exploratory,
+Bellrock,Exploratory,
+Muir Mhòr,Exploratory,
+Bowdun,Exploratory,
+Ayre,Exploratory,
+Broadshore,Exploratory,
+Caledonia,Exploratory,
+Stromar,Exploratory,
+MarramWind,Exploratory,
+Buchan,Exploratory,
+West of Orkney,Exploratory,
+Havbredey,Exploratory,
+"""N3 Project""",Exploratory,
+Spiorad na Mara,Exploratory,
+MachairWind,Exploratory,
+Sheringham Shoal and Dudgeon Extensions,Exploratory,
+Llŷr 1,Exploratory,
+Llŷr 2,Exploratory,
+Whitecross,Exploratory,
+Blyth Offshore,Decommissioned,
+Forthwind,Cancelled,
+Hornsea Four,Cancelled,
+Morgan,Cancelled,
+TwinHub Floating Offshore Wind Project,Cancelled,
+CampionWind,Cancelled,
