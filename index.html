@@ -236,6 +236,28 @@
      
     </div>
 </section>
+
+ <section class="challenge">
+    <div class="challenge__num" aria-hidden="true">07</div>
+    <div class="challenge__body">
+        <h1>CC7: Maps — Base Maps and Choropleths</h1>
+
+        <h3>Coordinates map</h3>
+        <p>
+            Renewable electricity's share of total generation in each UK nation (2024),
+            shown as circles sized by percentage at each nation's capital.
+            Source: DESNZ Energy Trends, December 2025. Boundary data: ONS.
+        </p>
+        <figure id="Location12"></figure>
+
+        <h3>Choropleth</h3>
+        <p>
+            The same data shown as a choropleth, colouring each UK region by its
+            nation's renewable electricity share.
+        </p>
+        <figure id="Location13"></figure>
+    </div>
+</section>
  
     <script>
  
@@ -271,6 +293,12 @@ vegaEmbed('#Location10', chart10)
 
      let chart11 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc5_scraper_chart.vl.json";
 vegaEmbed('#Location11', chart11)
+
+     let chart12 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc7_coordinates_map.vl.json";
+vegaEmbed('#Location12', chart12)
+
+let chart13 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc7_choropleth_map.vl.json";
+vegaEmbed('#Location13', chart13)
  
     </script>
 </body>
