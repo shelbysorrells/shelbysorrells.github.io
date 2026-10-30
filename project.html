@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Wind in the Crosswinds</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F4;
+            color: #2B2B2B;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 420px;
+            background-image: url('hero-wind.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(20, 30, 40, 0.1) 0%, rgba(20, 30, 40, 0.75) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 50px 24px;
+            color: #ffffff;
+            text-align: left;
+            width: 100%;
+        }
+
+        .hero-content h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.6rem;
+            font-weight: 900;
+            margin: 0 0 8px 0;
+            line-height: 1.15;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #E8E4DC;
+            margin: 0 0 20px 0;
+        }
+
+        .hero-content .byline {
+            font-size: 0.95rem;
+            color: #D6D2C8;
+        }
+
+        .hero-content .byline a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px 24px 80px 24px;
+        }
+
+        nav.section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            padding: 18px 0;
+            border-bottom: 1px solid #DDD6C7;
+            margin-bottom: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav.section-nav a {
+            color: #6B5B3E;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        nav.section-nav a:hover {
+            color: #B8562F;
+        }
+
+        section {
+            margin-bottom: 64px;
+        }
+
+        section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            color: #1F2A33;
+            border-bottom: 3px solid #B8562F;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        section p {
+            font-size: 1.02rem;
+            color: #3A3A3A;
+        }
+
+        .chart-block {
+            margin-top: 36px;
+            padding-top: 28px;
+            border-top: 1px solid #EAE5D9;
+        }
+
+        .chart-block h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1F2A33;
+            margin-bottom: 6px;
+        }
+
+        .chart-block figure {
+            margin: 16px 0 0 0;
+            width: 100%;
+        }
+
+        .chart-block .vega-embed {
+            width: 100% !important;
+        }
+
+        .placeholder {
+            font-style: italic;
+            color: #9B8F75;
+            background: #F1ECE0;
+            border-left: 3px solid #B8562F;
+            padding: 14px 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Wind in the Crosswinds</h1>
+            <p class="subtitle">Why solar survives political risk and wind doesn't</p>
+            <p class="byline">
+                Shelby Sorrells &nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a> &nbsp;|&nbsp;
+                <a href="https://www.github.com/shelbysorrells">GitHub</a> &nbsp;|&nbsp;
+                <a href="index.html">Back to Portfolio</a>
+            </p>
+        </div>
+    </div>
+
+    <nav class="section-nav">
+        <a href="#aims">Aims</a>
+        <a href="#data">Data</a>
+        <a href="#charts">Charts</a>
+        <a href="#tools">Tools</a>
+        <a href="#conclusions">Conclusions</a>
+    </nav>
+
+    <main>
+
+        <section id="aims">
+            <h2>Aims</h2>
+            <p>
+                Climate policy is often discussed as if it affects "renewables" uniformly
+                — a single category that either benefits or suffers from political change.
+                This project tests whether that framing holds, by asking a narrower, more
+                specific question: are wind and solar equally exposed to political risk,
+                or does one absorb the shock while the other survives largely unscathed?
+            </p>
+            <p>
+                I examine two independent political events, one in each country, that
+                changed the financial conditions for renewable energy almost overnight:
+                the US "One Big Beautiful Bill Act" (2025), which rolled back federal tax
+                incentives, and the UK's 2023 Contracts for Difference auction, where a
+                mispriced cap produced zero bids for offshore wind — even as solar and
+                onshore wind continued to secure contracts in that same auction. Comparing
+                how solar and wind capacity responded to each shock lets me test whether a
+                consistent pattern holds across two different countries and two entirely
+                different political mechanisms (legislation vs. a single mispriced auction).
+            </p>
+            <p>
+                Beyond the comparison itself, I look more closely at one concrete case — a
+                specific cancelled project — to show what this pattern means in practice,
+                not just in aggregate statistics.
+            </p>
+            <p>
+                The answer matters for how climate policy gets designed: if wind and solar
+                carry genuinely different exposure to political reversal, governments and
+                investors need technology-specific safeguards, not a single blanket
+                approach to "renewable energy policy."
+            </p>
+        </section>
+
+        <section id="data">
+            <h2>Data</h2>
+            <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
+        </section>
+
+        <section id="charts">
+            <h2>Charts</h2>
+
+            <div class="chart-block">
+                <h3>Chart 1: US Solar vs. Wind Capacity Over Time</h3>
+                <figure id="chartLocation1"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 2: UK CfD Auction Results by Technology (2023)</h3>
+                <figure id="chartLocation2"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 3: Post-OBBBA Forecast Cuts, Wind vs. Solar</h3>
+                <figure id="chartLocation3"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 4: UK Offshore Wind Secured per Auction Round</h3>
+                <figure id="chartLocation4"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 5: US Quarterly Capacity Additions (2025 Collapse)</h3>
+                <figure id="chartLocation5"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 6: UK Offshore Wind Projects — Completed vs. Shelved</h3>
+                <figure id="chartLocation6"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 7: Interactive Comparison — Technology and Country</h3>
+                <figure id="chartLocation7"></figure>
+            </div>
+
+            <div class="chart-block">
+                <h3>Chart 8: Summary — % Change, Wind vs. Solar, UK and US</h3>
+                <figure id="chartLocation8"></figure>
+            </div>
+        </section>
+
+        <section id="tools">
+            <h2>Tools</h2>
+            <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
+        </section>
+
+        <section id="conclusions">
+            <h2>Conclusions</h2>
+            <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
+        </section>
+
+    </main>
+
+    <script>
+        // Chart embed calls go here as each chart is built.
+        // Example pattern:
+        // let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
+        // vegaEmbed('#chartLocation1', chart1)
+    </script>
+
+</body>
+</html>
