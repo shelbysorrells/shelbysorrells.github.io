@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Renewable Electricity Share by UK Nation (2024)",
+  "width": 450,
+  "height": 500,
+  "autosize": { "type": "pad" },
+  "projection": {
+    "type": "mercator",
+    "center": [-3, 55],
+    "scale": 1600,
+    "translate": [225, 250]
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/geogUKregion.json",
+    "format": { "type": "topojson", "feature": "UKregionmerc" }
+  },
+  "transform": [
+    {
+      "calculate": "datum.properties.AREANM == 'Scotland' ? 90 : datum.properties.AREANM == 'Wales' ? 34 : datum.properties.AREANM == 'Northern Ireland' ? 44 : 63",
+      "as": "renewable_pct"
+    }
+  ],
+  "mark": { "type": "geoshape", "stroke": "#ffffff", "strokeWidth": 0.7 },
+  "encoding": {
+    "color": {
+      "field": "renewable_pct",
+      "type": "quantitative",
+      "scale": { "scheme": "purples" },
+      "legend": { "title": "Renewable %" }
+    },
+    "tooltip": [
+      { "field": "properties.AREANM", "type": "nominal", "title": "Area" },
+      { "field": "renewable_pct", "type": "quantitative", "title": "Renewable %" }
+    ]
+  },
+  "config": { "view": { "stroke": null } }
+}
