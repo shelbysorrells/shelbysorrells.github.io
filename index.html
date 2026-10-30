@@ -174,7 +174,36 @@
         <figure id="Location9"></figure>
     </div>
 </section>
- 
+
+ <section class="challenge">
+    <div class="challenge__num" aria-hidden="true">05</div>
+    <div class="challenge__body">
+        <h1>CC5: Accessing Data via API</h1>
+
+        <figure id="Location10"></figure>
+
+        <p>
+            This chart uses the US Energy Information Administration's Open Data API
+            (base URL: <code>api.eia.gov/v2</code>). The specific route is
+            <code>electricity/electric-power-operational-data/data</code>, which requires
+            an API key, a <code>frequency</code> (annual), a <code>data</code> field (here,
+            <code>generation</code>), and facet filters to narrow the request —
+            <code>fueltypeid=SUN</code> for solar and <code>sectorid=98</code> to combine
+            all sectors into one national total. The API returns JSON with the
+            records nested inside <code>response.data</code>, where each row is a
+            ready-to-chart record with a <code>period</code> (year) and a
+            <code>generation</code> value in thousand megawatthours — no manual cleaning
+            required.
+        </p>
+
+        <p>
+            Full URL used:<br>
+            <small>
+                https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?api_key=hMkmtH8pLcGNkCFWmKkhztP7kqRPrbFbhhGdR9Bh&frequency=annual&data[0]=generation&facets[fueltypeid][]=SUN&facets[sectorid][]=98&sort[0][column]=period&sort[0][direction]=asc&length=5000
+            </small>
+        </p>
+    </div>
+</section>
  
     <script>
  
@@ -204,6 +233,9 @@
 
        let chart9 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc4_improved.vl.json";
        vegaEmbed('#Location9', chart9)
+
+      let chart10 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc5_api_chart.vl.json";
+vegaEmbed('#Location10', chart10)
  
     </script>
 </body>
