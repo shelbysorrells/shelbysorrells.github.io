@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Three Years, One Direction: DEI Language in Freefall",
+    "text": "DEI Language in Freefall",
     "subtitle": "10-K filings mentioning the exact phrase, Q1 each year",
     "anchor": "start",
     "font": "Merriweather, serif",
@@ -15,7 +15,7 @@
   "autosize": {"type": "fit", "contains": "padding"},
   "background": "#F7F7F8",
   "data": {
-    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_quarter.json"
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_quarter (1).json"
   },
   "transform": [
     {"filter": "datum.quarter == '2024 Q1' || datum.quarter == '2025 Q1' || datum.quarter == '2026 Q1'"}
