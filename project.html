@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
-    <title>Not All Renewables Are Equal: Solar, Wind, and Political Risk in the UK and US</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <title>The Great Scrubbing: How DEI Language Disappeared from Corporate America</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,126 +19,117 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FAF8F4;
-            color: #2B2B2B;
+            background-color: #F7F7F8;
+            color: #1A1A1A;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
-        .hero {
-            position: relative;
-            height: 60vh;
-            min-height: 420px;
-            background-image: url('hero-combo.jpg');
-            background-size: cover;
-            background-position: center bottom;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(20, 30, 40, 0.1) 0%, rgba(20, 30, 40, 0.75) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 860px;
+        header {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 50px 24px;
-            color: #ffffff;
-            text-align: left;
-            width: 100%;
+            padding: 40px 24px 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .hero-content h1 {
+        header .site-name {
             font-family: 'Merriweather', serif;
-            font-size: 2.3rem;
-            font-weight: 900;
-            margin: 0 0 8px 0;
-            line-height: 1.2;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1A1A1A;
         }
 
-        .hero-content .subtitle {
-            font-size: 1.15rem;
-            font-weight: 400;
-            color: #E8E4DC;
-            margin: 0 0 20px 0;
-        }
-
-        .hero-content .byline {
+        header nav a {
+            color: #C9511E;
+            text-decoration: none;
+            margin-left: 24px;
             font-size: 0.95rem;
-            color: #D6D2C8;
-        }
-
-        .hero-content .byline a {
-            color: #ffffff;
-            text-decoration: underline;
         }
 
         main {
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px 24px 80px 24px;
         }
 
-        nav.section-nav {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            padding: 18px 0;
-            border-bottom: 1px solid #DDD6C7;
+        .title-block {
+            text-align: center;
+            margin: 60px 0 40px 0;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #1A1A1A;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #5A5A5A;
+            margin: 0;
+        }
+
+        .hero-photo {
+            width: 100%;
+            border-radius: 4px;
             margin-bottom: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
         }
 
-        nav.section-nav a {
-            color: #6B5B3E;
-            text-decoration: none;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-        }
-
-        nav.section-nav a:hover {
-            color: #1B3A57;
+        .photo-caption {
+            font-size: 0.85rem;
+            color: #8A8A8A;
+            margin-top: -40px;
+            margin-bottom: 50px;
         }
 
         section {
-            margin-bottom: 64px;
+            margin-bottom: 56px;
         }
 
         section h2 {
             font-family: 'Merriweather', serif;
-            font-size: 1.5rem;
-            color: #1F2A33;
-            border-bottom: 3px solid #1B3A57;
-            padding-bottom: 10px;
-            margin-bottom: 24px;
-            display: inline-block;
+            font-size: 1.7rem;
+            color: #1A1A1A;
+            margin-bottom: 20px;
         }
 
         section p {
-            font-size: 1.02rem;
-            color: #3A3A3A;
+            font-size: 1.05rem;
+            color: #2A2A2A;
+        }
+
+        .info-box {
+            background: #EAEAEA;
+            padding: 28px 32px;
+            margin: 20px 0;
+        }
+
+        .info-box h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .info-box a {
+            color: #C9511E;
         }
 
         .chart-block {
             margin-top: 36px;
-            padding-top: 28px;
-            border-top: 1px solid #EAE5D9;
         }
 
         .chart-block h3 {
             font-family: 'Merriweather', serif;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            color: #1F2A33;
-            margin-bottom: 6px;
+            color: #1A1A1A;
+            margin-bottom: 8px;
         }
 
         .chart-block figure {
@@ -152,59 +143,21 @@
 
         .placeholder {
             font-style: italic;
-            color: #9B8F75;
-            background: #F1ECE0;
-            border-left: 3px solid #1B3A57;
-            padding: 14px 18px;
-        }
-
-        .stripe-divider {
-            height: 6px;
-            width: 140px;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #D9A441 0%, #D9A441 50%, #4A7C8C 50%, #4A7C8C 100%);
-            border-radius: 3px;
-        }
-
-        .pull-quote {
-            background: #F1ECE0;
-            padding: 28px 32px;
-            margin: 24px 0;
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-            font-size: 1.15rem;
-            color: #1F2A33;
-            line-height: 1.5;
-        }
-
-        .pull-quote cite {
-            display: block;
-            margin-top: 14px;
-            font-style: normal;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: #6B5B3E;
-        }
-
-        .chart-subtitle {
-            font-size: 0.9rem;
-            color: #6B5B3E;
-            margin-top: -10px;
-            margin-bottom: 18px;
+            color: #8A8A8A;
+            background: #EAEAEA;
+            padding: 16px 20px;
         }
 
         details {
             margin-top: 16px;
-            background: #F1ECE0;
-            border-left: 3px solid #1B3A57;
-            padding: 14px 18px;
+            background: #EAEAEA;
+            padding: 14px 20px;
         }
 
         details summary {
             cursor: pointer;
             font-weight: 600;
-            color: #1F2A33;
+            color: #1A1A1A;
         }
 
         details p {
@@ -217,224 +170,94 @@
 
 <body>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Not All Renewables Are Equal</h1>
-            <p class="subtitle">Solar, wind, and political risk in the UK and US</p>
-            <p class="byline">
-                Shelby Sorrells &nbsp;|&nbsp;
-                <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a> &nbsp;|&nbsp;
-                <a href="https://www.github.com/shelbysorrells">GitHub</a> &nbsp;|&nbsp;
-                <a href="index.html">Back to Portfolio</a>
-            </p>
-        </div>
-    </div>
-
-    <nav class="section-nav">
-        <a href="#aims">Aims</a>
-        <a href="#data">Data</a>
-        <a href="#tools">Tools</a>
-        <a href="#conclusions">Conclusions</a>
-    </nav>
+    <header>
+        <div class="site-name">Shelby Sorrells</div>
+        <nav>
+            <a href="index.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a>
+            <a href="https://www.github.com/shelbysorrells">GitHub</a>
+        </nav>
+    </header>
 
     <main>
 
+        <div class="title-block">
+            <h1>The Great Scrubbing</h1>
+            <p class="subtitle">How DEI language disappeared from corporate America's SEC filings</p>
+        </div>
+
+        <img src="hero-photo.jpg" class="hero-photo" alt="Corporate headquarters">
+        <p class="photo-caption">Photo: [source once you've picked one]</p>
+
         <section id="aims">
-            <div class="stripe-divider"></div>
             <h2>Aims</h2>
             <p>
-                Climate policy is often discussed as if it affects "renewables" uniformly
-                — a single category that either benefits or suffers from political change.
-                This project tests whether that framing holds, by asking a narrower, more
-                specific question: are wind and solar equally exposed to political risk,
-                or does one absorb the shock while the other survives largely unscathed?
+                In 2025, companies across the US quietly began removing references to
+                diversity, equity, and inclusion from their public communications — but
+                how much of that retreat actually reached the one place companies can't
+                easily spin: their legally mandated disclosures to investors? This project
+                asks a specific, countable question: did the exact language companies use
+                in SEC filings measurably change after the 2024 US election and the Trump
+                administration's subsequent anti-DEI executive orders, and if so, how fast
+                and how far?
             </p>
             <p>
-                I examine two independent political events, one in each country, that
-                changed the financial conditions for renewable energy almost overnight:
-                the US "One Big Beautiful Bill Act" (2025), which rolled back federal tax
-                incentives, and the UK's 2023 Contracts for Difference auction, where a
-                mispriced cap produced zero bids for offshore wind — even as solar and
-                onshore wind continued to secure contracts in that same auction. Comparing
-                how solar and wind capacity responded to each shock lets me test whether a
-                consistent pattern holds across two different countries and two entirely
-                different political mechanisms (legislation vs. a single mispriced auction).
+                Using the SEC's EDGAR full-text search system — which indexes the complete
+                text of every public filing since 2001 — I track how often specific terms
+                ("diversity, equity, and inclusion," "ESG," "climate risk") appear in annual
+                10-K filings, quarter by quarter, before and after this political shift. An
+                initial test of one phrase alone showed a striking year-over-year drop of
+                over 50% between Q1 2024 and Q1 2025 — large enough to warrant closer
+                examination across multiple terms and a longer time window.
             </p>
             <p>
-                Beyond the comparison itself, I look more closely at one concrete case — a
-                specific cancelled project — to show what this pattern means in practice.
-            </p>
-            <p>
-                The answer matters for how climate policy gets designed: if wind and solar
-                carry genuinely different exposure to political reversal, governments and
-                investors need technology-specific safeguards, not a single blanket
-                approach to renewable energy policy.
+                This matters because SEC filings are the one corporate communication channel
+                where companies face real legal exposure for misstatement, making any
+                detectable shift in language a meaningful signal of how deeply political
+                pressure has reached into formal corporate governance, not just public
+                messaging.
             </p>
         </section>
 
         <section id="data">
-            <div class="stripe-divider"></div>
             <h2>Data</h2>
-            <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
+            <div class="info-box">
+                <h3>The Data</h3>
+                <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
+            </div>
         </section>
 
-        <section id="the-long-run">
-            <div class="stripe-divider"></div>
-            <h2>Two Technologies, One Energy Transition</h2>
-            <p>
-                Solar and wind are usually discussed together, as if they were two versions
-                of the same story: both renewable, both growing, both central to the energy
-                transition. Over the past two decades, both genuinely have grown — from
-                almost nothing to a meaningful share of the grid in both the US and UK.
-                But that shared growth curve hides a sharper difference in how each
-                technology actually responds when politics intervenes.
-            </p>
+        <section id="charts">
+            <h2>Charts</h2>
 
             <div class="chart-block">
-                <h3>US Solar vs. Wind Generation Over Time</h3>
-                <p class="chart-subtitle">Annual generation, thousand MWh. Hover to compare both lines at any year.</p>
+                <h3>The Phrase That Disappeared</h3>
+                <p>
+                    Mentions of "diversity, equity, and inclusion" in 10-K filings fell by
+                    more than half between Q1 2024 and Q1 2025 — the same quarter, one year
+                    apart.
+                </p>
                 <figure id="chartLocation1"></figure>
                 <details>
                     <summary>Notes for replication</summary>
                     <p>
-                        Data pulled live from the EIA Open Data API (electric-power-operational-data endpoint),
-                        filtered to fuel type SUN (solar) and WND (wind), sector 98 (Electric Power), summed
-                        across all US states to a national annual total. No manual cleaning required beyond
-                        converting the generation field from text to numeric.
-                    </p>
-                </details>
-            </div>
-        </section>
-
-        <section id="the-shock">
-            <div class="stripe-divider"></div>
-            <h2>Two Shocks, One Pattern</h2>
-            <p>
-                Within a few years of each other, both the UK and US made political decisions
-                that changed the financial terms for renewable energy almost overnight. Neither
-                decision targeted "renewables" as a category — each one, in its own way, ended
-                up treating wind and solar very differently.
-            </p>
-
-            <div class="pull-quote">
-                "The result raises significant questions about the UK's ability to reach its
-                50GW offshore wind target by 2030."
-                <cite>— S&amp;P Global Commodity Insights, on the UK's AR5 auction result, September 2023</cite>
-            </div>
-
-            <div class="chart-block">
-                <h3>Offshore Wind Secured Zero Contracts in the UK's 2023 Auction</h3>
-                <p class="chart-subtitle">
-                    In the UK's 2023 renewable energy auction, a mispriced cap meant offshore
-                    wind developers submitted zero bids — while solar and onshore wind both
-                    secured contracts in that same auction.
-                </p>
-                <figure id="chartLocation2"></figure>
-                <details>
-                    <summary>Notes for replication</summary>
-                    <p>
-                        Figures are the UK Department for Energy Security and Net Zero's published
-                        results for Allocation Round 5 (AR5) of the Contracts for Difference
-                        scheme, September 2023, as reported by Carbon Brief and other industry
-                        sources. Offshore wind received zero bids because the auction's maximum
-                        allowed price (£44/MWh) was judged too low by developers given rising
-                        costs; solar and onshore wind cleared near their own price ceilings.
+                        Data pulled live from the SEC EDGAR full-text search API
+                        (efts.sec.gov/LATEST/search-index), filtered to form type 10-K,
+                        searching the exact phrase "diversity, equity, and inclusion"
+                        within each quarter's date range. The API is free and requires no
+                        key, but does require a declared User-Agent header.
                     </p>
                 </details>
             </div>
 
-            <div class="chart-block">
-                <h3>Wind Absorbs the Brunt of the OBBBA's Rollback</h3>
-                <p class="chart-subtitle">
-                    Analysts cut their 2025-2030 wind forecast more than twice as much as
-                    their solar forecast after the same piece of legislation.
-                </p>
-                <figure id="chartLocation3"></figure>
-                <details>
-                    <summary>Notes for replication</summary>
-                    <p>
-                        Figures are BloombergNEF's own published revision to its US clean energy
-                        build forecast following the One Big Beautiful Bill Act (July 2025),
-                        comparing the post-OBBBA outlook to BNEF's prior 1H 2025 Clean Energy
-                        Market Outlook for the 2025-2030 period.
-                    </p>
-                </details>
-            </div>
-        </section>
-
-        <section id="inside-the-collapse">
-            <div class="stripe-divider"></div>
-            <h2>What the Headline Numbers Don't Show</h2>
-            <p>
-                A single annual total or a single auction result can make a shock look like
-                a one-off. Looking at the same story at a finer grain — quarter by quarter,
-                auction round by auction round — shows whether the damage was temporary or
-                lasting, and whether it hit every part of the industry equally.
-            </p>
-
-            <div class="chart-block">
-    <h3>UK Offshore Wind Secured per Auction Round</h3>
-    <p class="chart-subtitle">
-        AR5's zero-bid result wasn't the end of the story — once the price cap
-        was corrected, offshore wind not only recovered, it hit a new record.
-    </p>
-    <figure id="chartLocation4"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Figures compiled from industry reporting (Regen, Offshore Wind, Cornwall
-            Insight, Offshore Industry News) on each UK Contracts for Difference
-            allocation round: AR4 (July 2022), AR5 (September 2023), AR6 (September
-            2024), and AR7 (January 2026). AR6 and AR7 figures include both
-            fixed-bottom and floating offshore wind capacity.
-        </p>
-    </details>
-</div>
-        </section>
-
-        <section id="one-project">
-            <div class="stripe-divider"></div>
-            <h2>A Single Project, Shelved</h2>
-            <p>
-                Behind every aggregate statistic sit real, named projects — turbines that
-                were planned, financed, and then abandoned when the economics stopped working.
-                One such project makes the abstract pattern concrete.
-            </p>
-
-            <div class="chart-block">
-                <h3>UK Offshore Wind Projects: Completed vs. Shelved</h3>
-                <figure id="chartLocation6"></figure>
-            </div>
-        </section>
-
-        <section id="the-pattern-holds">
-            <div class="stripe-divider"></div>
-            <h2>Putting It Together</h2>
-            <p>
-                Two countries, two unrelated political mechanisms, and the same result each
-                time: wind absorbs the shock, solar does not. The charts below let you compare
-                the pattern directly, across technology and country.
-            </p>
-
-            <div class="chart-block">
-                <h3>Comparing Technologies and Countries</h3>
-                <figure id="chartLocation7"></figure>
-            </div>
-
-            <div class="chart-block">
-                <h3>The Overall Pattern: Wind vs. Solar, UK and US</h3>
-                <figure id="chartLocation8"></figure>
-            </div>
         </section>
 
         <section id="tools">
-            <div class="stripe-divider"></div>
             <h2>Tools</h2>
             <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
         </section>
 
         <section id="conclusions">
-            <div class="stripe-divider"></div>
             <h2>Conclusions</h2>
             <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
         </section>
@@ -442,17 +265,7 @@
     </main>
 
     <script>
-        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
-        vegaEmbed('#chartLocation1', chart1)
-
-        let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
-        vegaEmbed('#chartLocation2', chart2)
-
-        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
-        vegaEmbed('#chartLocation3', chart3)
-
-        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
-vegaEmbed('#chartLocation4', chart4)
+        // Chart embed calls go here as each chart is built.
     </script>
 
 </body>
