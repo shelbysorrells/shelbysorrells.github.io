@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
-    <title>Not All Renewables Are Equal: Solar, Wind and Political Risk in the UK and US</title>
+    <title>Not All Renewables Are Equal: Solar, Wind, and Political Risk in the UK and US</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -105,7 +105,7 @@
         }
 
         nav.section-nav a:hover {
-            color: #B8562F;
+            color: #1B3A57;
         }
 
         section {
@@ -116,7 +116,7 @@
             font-family: 'Merriweather', serif;
             font-size: 1.5rem;
             color: #1F2A33;
-            border-bottom: 3px solid #B8562F;
+            border-bottom: 3px solid #1B3A57;
             padding-bottom: 10px;
             margin-bottom: 24px;
             display: inline-block;
@@ -154,8 +154,79 @@
             font-style: italic;
             color: #9B8F75;
             background: #F1ECE0;
-            border-left: 3px solid #B8562F;
+            border-left: 3px solid #1B3A57;
             padding: 14px 18px;
+        }
+
+        .stripe-divider {
+            height: 6px;
+            width: 140px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #D9A441 0%, #D9A441 50%, #4A7C8C 50%, #4A7C8C 100%);
+            border-radius: 3px;
+        }
+
+        .pull-quote {
+            background: #F1ECE0;
+            padding: 28px 32px;
+            margin: 24px 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #1F2A33;
+            line-height: 1.5;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 14px;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #6B5B3E;
+        }
+
+        .img-caption {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+
+        .img-caption .caption-name {
+            font-weight: 600;
+            color: #1F2A33;
+            display: block;
+        }
+
+        .img-caption a {
+            color: #9B8F75;
+        }
+
+        .chart-subtitle {
+            font-size: 0.9rem;
+            color: #6B5B3E;
+            margin-top: -10px;
+            margin-bottom: 18px;
+        }
+
+        details {
+            margin-top: 16px;
+            background: #F1ECE0;
+            border-left: 3px solid #1B3A57;
+            padding: 14px 18px;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #1F2A33;
+        }
+
+        details p {
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -186,6 +257,8 @@
     <main>
 
         <section id="aims">
+            <div class="stripe-divider">
+            </div>
             <h2>Aims</h2>
             <p>
                 Climate policy is often discussed as if it affects "renewables" uniformly
@@ -207,27 +280,41 @@
             </p>
             <p>
                 Beyond the comparison itself, I look more closely at one concrete case — a
-                specific cancelled project.
+                specific cancelled project — to show what this pattern means in practice.
             </p>
             <p>
                 The answer matters for how climate policy gets designed: if wind and solar
-                carry different exposure to political reversal, governments and
+                carry genuinely different exposure to political reversal, governments and
                 investors need technology-specific safeguards, not a single blanket
                 approach to renewable energy policy.
             </p>
         </section>
 
         <section id="data">
+            <div class="stripe-divider">
+            </div>
             <h2>Data</h2>
             <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
         </section>
 
         <section id="charts">
+            <div class="stripe-divider">
+            </div>
             <h2>Charts</h2>
 
             <div class="chart-block">
-                <h3>Chart 1: US Solar vs. Wind Capacity Over Time</h3>
+                <h3>Chart 1: US Solar vs. Wind Generation Over Time</h3>
+                <p class="chart-subtitle">Annual generation, thousand MWh. Hover to compare both lines at any year.</p>
                 <figure id="chartLocation1"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Data pulled live from the EIA Open Data API (electric-power-operational-data endpoint),
+                        filtered to fuel type SUN (solar) and WND (wind), sector 98 (Electric Power), summed
+                        across all US states to a national annual total. No manual cleaning required beyond
+                        converting the generation field from text to numeric.
+                    </p>
+                </details>
             </div>
 
             <div class="chart-block">
@@ -267,11 +354,15 @@
         </section>
 
         <section id="tools">
+            <div class="stripe-divider">
+            </div>
             <h2>Tools</h2>
             <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
         </section>
 
         <section id="conclusions">
+            <div class="stripe-divider">
+            </div>
             <h2>Conclusions</h2>
             <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
         </section>
@@ -279,10 +370,8 @@
     </main>
 
     <script>
-        // Chart embed calls go here as each chart is built.
-        // Example pattern:
-        // let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
-        // vegaEmbed('#chartLocation1', chart1)
+        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
+        vegaEmbed('#chartLocation1', chart1)
     </script>
 
 </body>
