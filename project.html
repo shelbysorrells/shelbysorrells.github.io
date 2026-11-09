@@ -231,24 +231,29 @@
             <h2>Charts</h2>
 
             <div class="chart-block">
-                <h3>The Phrase That Disappeared</h3>
-                <p>
-                    Mentions of "diversity, equity, and inclusion" in 10-K filings fell by
-                    more than half between Q1 2024 and Q1 2025 — the same quarter, one year
-                    apart.
+    <h3>DEI Language in Freefall</h3>
+    <p>
+        Mentions of "diversity, equity, and inclusion" in 10-K filings dropped from
+        1,187 in Q1 2024, to 571 in Q1 2025, to just 50 in Q1 2026 — a continuous
+        decline across three consecutive years.
+    </p>
+    <figure id="chartLocation1"></figure>
+    <details>
+        <summary>Notes for replication</summary>
+        <p>
+            Data gathered via the SEC EDGAR full-text search API
+            (efts.sec.gov/LATEST/search-index), searching the exact phrase
+            "diversity, equity, and inclusion" within 10-K filings, filtered to
+            the first quarter of each year for a fair comparison (10-K filing
+            volume is heavily concentrated in Q1 due to fiscal year-end deadlines,
+            so comparing Q1-to-Q1 avoids a seasonality bias that comparing
+            different quarters would introduce). Because this API blocks direct
+            browser requests (CORS), data was collected via a Python script run in
+            Google Colab and saved as a static file.
+
                 </p>
-                <figure id="chartLocation1"></figure>
-                <details>
-                    <summary>Notes for replication</summary>
-                    <p>
-                        Data pulled live from the SEC EDGAR full-text search API
-                        (efts.sec.gov/LATEST/search-index), filtered to form type 10-K,
-                        searching the exact phrase "diversity, equity, and inclusion"
-                        within each quarter's date range. The API is free and requires no
-                        key, but does require a declared User-Agent header.
-                    </p>
-                </details>
-            </div>
+    </details>
+</div>
 
         </section>
 
@@ -265,7 +270,8 @@
     </main>
 
     <script>
-        // Chart embed calls go here as each chart is built.
+        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl (2).json";
+vegaEmbed('#chartLocation1', chart1)
     </script>
 
 </body>
