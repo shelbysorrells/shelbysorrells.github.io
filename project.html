@@ -323,9 +323,22 @@
             </div>
 
             <div class="chart-block">
-                <h3>Chart 3: Post-OBBBA Forecast Cuts, Wind vs. Solar</h3>
-                <figure id="chartLocation3"></figure>
-            </div>
+    <h3>Chart 3: Post-OBBBA Forecast Cuts, Wind vs. Solar</h3>
+    <p class="chart-subtitle">
+        Analysts cut their 2025-2030 wind forecast more than twice as much as
+        their solar forecast after the same piece of legislation.
+    </p>
+    <figure id="chartLocation3"></figure>
+    <details>
+        <summary>Notes for replication</summary>
+        <p>
+            Figures are BloombergNEF's own published revision to its US clean energy
+            build forecast following the One Big Beautiful Bill Act (July 2025),
+            comparing the post-OBBBA outlook to BNEF's prior 1H 2025 Clean Energy
+            Market Outlook for the 2025-2030 period.
+        </p>
+    </details>
+</div>
 
             <div class="chart-block">
                 <h3>Chart 4: UK Offshore Wind Secured per Auction Round</h3>
@@ -375,6 +388,9 @@
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
 vegaEmbed('#chartLocation2', chart2)
+
+        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
+vegaEmbed('#chartLocation3', chart3)
     </script>
 
 </body>
