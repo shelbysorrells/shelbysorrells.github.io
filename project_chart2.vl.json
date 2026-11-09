@@ -33,7 +33,7 @@
       "field": "gw",
       "type": "quantitative",
       "title": "Capacity awarded (GW)",
-      "scale": {"domain": [0, 2]}
+      "scale": {"domain": [0, 2.3]}
     },
     "color": {
       "field": "technology",
