@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Three Years, One Direction: DEI Language in Freefall",
+    "subtitle": "10-K filings mentioning the exact phrase, Q1 each year",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 320,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_quarter.json"
+  },
+  "transform": [
+    {"filter": "datum.quarter == '2024 Q1' || datum.quarter == '2025 Q1' || datum.quarter == '2026 Q1'"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "quarter",
+      "type": "nominal",
+      "title": null,
+      "sort": ["2024 Q1", "2025 Q1", "2026 Q1"],
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "filings",
+      "type": "quantitative",
+      "title": "10-K filings mentioning the phrase",
+      "scale": {"domain": [0, 1350]}
+    },
+    "color": {
+      "value": "#1B3A57"
+    },
+    "tooltip": [
+      {"field": "quarter", "type": "nominal", "title": "Quarter"},
+      {"field": "filings", "type": "quantitative", "title": "Filings"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "bar", "size": 100}},
+    {
+      "mark": {"type": "text", "dy": -12, "fontWeight": "bold", "fontSize": 14, "color": "#1A1A1A"},
+      "encoding": {
+        "text": {"field": "filings", "type": "quantitative", "format": ","}
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 14,
+      "labelColor": "#2A2A2A",
+      "domainColor": "#CCCCCC",
+      "tickColor": "#CCCCCC",
+      "gridDash": [2, 3],
+      "gridColor": "#DDDDDD",
+      "gridOpacity": 0.7
+    }
+  }
+}
