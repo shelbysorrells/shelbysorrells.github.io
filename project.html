@@ -187,22 +187,6 @@
             color: #6B5B3E;
         }
 
-        .img-caption {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            margin-top: 8px;
-        }
-
-        .img-caption .caption-name {
-            font-weight: 600;
-            color: #1F2A33;
-            display: block;
-        }
-
-        .img-caption a {
-            color: #9B8F75;
-        }
-
         .chart-subtitle {
             font-size: 0.9rem;
             color: #6B5B3E;
@@ -249,7 +233,6 @@
     <nav class="section-nav">
         <a href="#aims">Aims</a>
         <a href="#data">Data</a>
-        <a href="#charts">Charts</a>
         <a href="#tools">Tools</a>
         <a href="#conclusions">Conclusions</a>
     </nav>
@@ -257,8 +240,7 @@
     <main>
 
         <section id="aims">
-            <div class="stripe-divider">
-            </div>
+            <div class="stripe-divider"></div>
             <h2>Aims</h2>
             <p>
                 Climate policy is often discussed as if it affects "renewables" uniformly
@@ -291,19 +273,25 @@
         </section>
 
         <section id="data">
-            <div class="stripe-divider">
-            </div>
+            <div class="stripe-divider"></div>
             <h2>Data</h2>
             <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
         </section>
 
-        <section id="charts">
-            <div class="stripe-divider">
-            </div>
-            <h2>Charts</h2>
+        <section id="the-long-run">
+            <div class="stripe-divider"></div>
+            <h2>Two Technologies, One Energy Transition</h2>
+            <p>
+                Solar and wind are usually discussed together, as if they were two versions
+                of the same story: both renewable, both growing, both central to the energy
+                transition. Over the past two decades, both genuinely have grown — from
+                almost nothing to a meaningful share of the grid in both the US and UK.
+                But that shared growth curve hides a sharper difference in how each
+                technology actually responds when politics intervenes.
+            </p>
 
             <div class="chart-block">
-                <h3>Chart 1: US Solar vs. Wind Generation Over Time</h3>
+                <h3>US Solar vs. Wind Generation Over Time</h3>
                 <p class="chart-subtitle">Annual generation, thousand MWh. Hover to compare both lines at any year.</p>
                 <figure id="chartLocation1"></figure>
                 <details>
@@ -316,66 +304,137 @@
                     </p>
                 </details>
             </div>
+        </section>
 
-            <div class="chart-block">
-                <h3>Chart 2: UK CfD Auction Results by Technology (2023)</h3>
-                <figure id="chartLocation2"></figure>
+        <section id="the-shock">
+            <div class="stripe-divider"></div>
+            <h2>Two Shocks, One Pattern</h2>
+            <p>
+                Within a few years of each other, both the UK and US made political decisions
+                that changed the financial terms for renewable energy almost overnight. Neither
+                decision targeted "renewables" as a category — each one, in its own way, ended
+                up treating wind and solar very differently.
+            </p>
+
+            <div class="pull-quote">
+                "The result raises significant questions about the UK's ability to reach its
+                50GW offshore wind target by 2030."
+                <cite>— S&amp;P Global Commodity Insights, on the UK's AR5 auction result, September 2023</cite>
             </div>
 
             <div class="chart-block">
-    <h3>Chart 3: Post-OBBBA Forecast Cuts, Wind vs. Solar</h3>
+                <h3>Offshore Wind Secured Zero Contracts in the UK's 2023 Auction</h3>
+                <p class="chart-subtitle">
+                    In the UK's 2023 renewable energy auction, a mispriced cap meant offshore
+                    wind developers submitted zero bids — while solar and onshore wind both
+                    secured contracts in that same auction.
+                </p>
+                <figure id="chartLocation2"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Figures are the UK Department for Energy Security and Net Zero's published
+                        results for Allocation Round 5 (AR5) of the Contracts for Difference
+                        scheme, September 2023, as reported by Carbon Brief and other industry
+                        sources. Offshore wind received zero bids because the auction's maximum
+                        allowed price (£44/MWh) was judged too low by developers given rising
+                        costs; solar and onshore wind cleared near their own price ceilings.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <h3>Wind Absorbs the Brunt of the OBBBA's Rollback</h3>
+                <p class="chart-subtitle">
+                    Analysts cut their 2025-2030 wind forecast more than twice as much as
+                    their solar forecast after the same piece of legislation.
+                </p>
+                <figure id="chartLocation3"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Figures are BloombergNEF's own published revision to its US clean energy
+                        build forecast following the One Big Beautiful Bill Act (July 2025),
+                        comparing the post-OBBBA outlook to BNEF's prior 1H 2025 Clean Energy
+                        Market Outlook for the 2025-2030 period.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <section id="inside-the-collapse">
+            <div class="stripe-divider"></div>
+            <h2>What the Headline Numbers Don't Show</h2>
+            <p>
+                A single annual total or a single auction result can make a shock look like
+                a one-off. Looking at the same story at a finer grain — quarter by quarter,
+                auction round by auction round — shows whether the damage was temporary or
+                lasting, and whether it hit every part of the industry equally.
+            </p>
+
+            <div class="chart-block">
+    <h3>UK Offshore Wind Secured per Auction Round</h3>
     <p class="chart-subtitle">
-        Analysts cut their 2025-2030 wind forecast more than twice as much as
-        their solar forecast after the same piece of legislation.
+        AR5's zero-bid result wasn't the end of the story — once the price cap
+        was corrected, offshore wind not only recovered, it hit a new record.
     </p>
-    <figure id="chartLocation3"></figure>
+    <figure id="chartLocation4"></figure>
     <details>
         <summary>Notes for replication</summary>
         <p>
-            Figures are BloombergNEF's own published revision to its US clean energy
-            build forecast following the One Big Beautiful Bill Act (July 2025),
-            comparing the post-OBBBA outlook to BNEF's prior 1H 2025 Clean Energy
-            Market Outlook for the 2025-2030 period.
+            Figures compiled from industry reporting (Regen, Offshore Wind, Cornwall
+            Insight, Offshore Industry News) on each UK Contracts for Difference
+            allocation round: AR4 (July 2022), AR5 (September 2023), AR6 (September
+            2024), and AR7 (January 2026). AR6 and AR7 figures include both
+            fixed-bottom and floating offshore wind capacity.
         </p>
     </details>
 </div>
+        </section>
+
+        <section id="one-project">
+            <div class="stripe-divider"></div>
+            <h2>A Single Project, Shelved</h2>
+            <p>
+                Behind every aggregate statistic sit real, named projects — turbines that
+                were planned, financed, and then abandoned when the economics stopped working.
+                One such project makes the abstract pattern concrete.
+            </p>
 
             <div class="chart-block">
-                <h3>Chart 4: UK Offshore Wind Secured per Auction Round</h3>
-                <figure id="chartLocation4"></figure>
-            </div>
-
-            <div class="chart-block">
-                <h3>Chart 5: US Quarterly Capacity Additions (2025 Collapse)</h3>
-                <figure id="chartLocation5"></figure>
-            </div>
-
-            <div class="chart-block">
-                <h3>Chart 6: UK Offshore Wind Projects — Completed vs. Shelved</h3>
+                <h3>UK Offshore Wind Projects: Completed vs. Shelved</h3>
                 <figure id="chartLocation6"></figure>
             </div>
+        </section>
+
+        <section id="the-pattern-holds">
+            <div class="stripe-divider"></div>
+            <h2>Putting It Together</h2>
+            <p>
+                Two countries, two unrelated political mechanisms, and the same result each
+                time: wind absorbs the shock, solar does not. The charts below let you compare
+                the pattern directly, across technology and country.
+            </p>
 
             <div class="chart-block">
-                <h3>Chart 7: Interactive Comparison — Technology and Country</h3>
+                <h3>Comparing Technologies and Countries</h3>
                 <figure id="chartLocation7"></figure>
             </div>
 
             <div class="chart-block">
-                <h3>Chart 8: Summary — % Change, Wind vs. Solar, UK and US</h3>
+                <h3>The Overall Pattern: Wind vs. Solar, UK and US</h3>
                 <figure id="chartLocation8"></figure>
             </div>
         </section>
 
         <section id="tools">
-            <div class="stripe-divider">
-            </div>
+            <div class="stripe-divider"></div>
             <h2>Tools</h2>
             <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
         </section>
 
         <section id="conclusions">
-            <div class="stripe-divider">
-            </div>
+            <div class="stripe-divider"></div>
             <h2>Conclusions</h2>
             <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
         </section>
@@ -387,10 +446,13 @@
         vegaEmbed('#chartLocation1', chart1)
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
-vegaEmbed('#chartLocation2', chart2)
+        vegaEmbed('#chartLocation2', chart2)
 
         let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
-vegaEmbed('#chartLocation3', chart3)
+        vegaEmbed('#chartLocation3', chart3)
+
+        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
+vegaEmbed('#chartLocation4', chart4)
     </script>
 
 </body>
