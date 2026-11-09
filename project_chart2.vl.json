@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Offshore Wind Secured Zero Contracts in the UK's 2023 Auction",
+    "subtitle": "Capacity awarded by technology, AR5 (2023), GW",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1F2A33",
+    "subtitleColor": "#6B5B3E"
+  },
+  "width": "container",
+  "height": 300,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#FAF8F4",
+  "data": {
+    "values": [
+      {"technology": "Solar PV", "gw": 1.9},
+      {"technology": "Onshore Wind", "gw": 1.7},
+      {"technology": "Offshore Wind", "gw": 0}
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "technology",
+      "type": "nominal",
+      "title": null,
+      "sort": ["Solar PV", "Onshore Wind", "Offshore Wind"],
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "gw",
+      "type": "quantitative",
+      "title": "Capacity awarded (GW)",
+      "scale": {"domain": [0, 2]}
+    },
+    "color": {
+      "field": "technology",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Solar PV", "Onshore Wind", "Offshore Wind"],
+        "range": ["#D9A441", "#4A7C8C", "#1B3A57"]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "technology", "type": "nominal", "title": "Technology"},
+      {"field": "gw", "type": "quantitative", "title": "Capacity (GW)"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "bar", "size": 70}},
+    {
+      "mark": {"type": "text", "dy": -10, "fontWeight": "bold", "fontSize": 13, "color": "#1F2A33"},
+      "encoding": {
+        "text": {"field": "gw", "type": "quantitative", "format": ".1f"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelColor": "#3A3A3A",
+      "labelFontSize": 13,
+      "domainColor": "#DDD6C7",
+      "tickColor": "#DDD6C7",
+      "gridDash": [2, 3],
+      "gridColor": "#DDD6C7",
+      "gridOpacity": 0.6
+    }
+  }
+}
