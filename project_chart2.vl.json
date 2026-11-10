@@ -74,7 +74,7 @@
       "as": "pct_change"
     },
     {
-      "calculate": "view_select == '2024' ? datum.filings_2024 : view_select == '2026' ? datum.filings_2026 : datum.pct_change",
+      "calculate": "view_select == '2024' ? datum.filings_2024 : view_select == '2026' ? datum.filings_2026 : -datum.pct_change",
       "as": "display_value"
     }
   ],
