@@ -84,7 +84,7 @@
     "color": {
       "field": "display_value",
       "type": "quantitative",
-      "scale": {"scheme": "blues"},
+      "scale": {"scheme": "oranges"},
       "legend": {"title": "Selected value (see dropdown)"}
     },
     "tooltip": [
