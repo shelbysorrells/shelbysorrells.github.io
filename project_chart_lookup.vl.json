@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 180,
+  "height": 220,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -529,7 +529,7 @@
   ],
   "mark": {
     "type": "square",
-    "size": 2200
+    "size": 1500
   },
   "encoding": {
     "x": {
@@ -537,7 +537,8 @@
       "type": "ordinal",
       "title": null,
       "axis": {
-        "labelAngle": 0
+        "labelAngle": 0,
+        "offset": 2
       }
     },
     "color": {
