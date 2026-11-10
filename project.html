@@ -13,27 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
 
     <style>
-
-        .pull-quote {
-    background: #EAEAEA;
-    padding: 28px 32px;
-    margin: 32px 0;
-    font-family: 'Merriweather', serif;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #1A1A1A;
-    line-height: 1.5;
-}
-
-.pull-quote cite {
-    display: block;
-    margin-top: 14px;
-    font-style: normal;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: #5A5A5A;
-} 
         * {
             box-sizing: border-box;
         }
@@ -182,6 +161,27 @@
             margin-top: 10px;
             font-size: 0.95rem;
         }
+
+        .pull-quote {
+            background: #EAEAEA;
+            padding: 28px 32px;
+            margin: 32px 0 20px 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1A1A1A;
+            line-height: 1.5;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 14px;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #5A5A5A;
+        }
     </style>
 </head>
 
@@ -243,43 +243,28 @@
         <section id="charts">
 
             <div class="chart-block">
-    <p>
-        Across the full S&P 500, roughly half of companies' 10-Ks mentioned
-        "diversity, equity, and inclusion" or "DEI" every year from 2022 through
-        2024. By 2026, fewer than 1 in 10 still did.
-    </p>
-    <figure id="chartLocation1"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Covers all 500 companies currently in the S&P 500 index, each queried
-            individually by CIK via the EDGAR full-text search API, checking each
-            full calendar year for either the phrase "diversity, equity, and
-            inclusion" or the initialism "DEI." The S&P 500 company list and CIK
-            numbers come from a public, open-license dataset maintained on GitHub
-            (datasets/s-and-p-500-companies), cross-referenced with SEC's own CIK
-            records.
-        </p>
-    </details>
-</div>
-
-<div class="chart-block">
-    <p>
-        Curious about a specific company? Search any S&P 500 company below to see
-        its own year-by-year record.
-    </p>
-    <figure id="chartLocationLookup"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Same dataset and method as above, shown per company. A company showing
-            "No" in every year may genuinely never have used DEI-related language —
-            or may simply have used different wording throughout (e.g. "inclusion
-            and diversity" rather than "diversity, equity, and inclusion"), which
-            this method cannot distinguish.
-        </p>
-    </details>
-</div>
+                <p>
+                    Mentions of "diversity, equity, and inclusion" in 10-K filings dropped from
+                    1,187 in Q1 2024, to 571 in Q1 2025, to just 337 in Q1 2026 — a continuous
+                    decline across three consecutive years.
+                </p>
+                <figure id="chartLocation1"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Data gathered via the SEC EDGAR full-text search API
+                        (efts.sec.gov/LATEST/search-index), searching the exact phrase
+                        "diversity, equity, and inclusion" within 10-K filings, filtered to
+                        the first quarter of each year for a fair comparison (10-K filing
+                        volume is heavily concentrated in Q1 due to fiscal year-end deadlines).
+                        Because this API blocks direct browser requests (CORS), data was
+                        collected via a Python script run in Google Colab and saved as a
+                        static file. Figures reflect the index as queried on 10 November 2026;
+                        SEC's search index is periodically reprocessed, so the same historical
+                        date range can return slightly different counts if queried again later.
+                    </p>
+                </details>
+            </div>
 
             <div class="chart-block">
                 <p>
@@ -328,10 +313,10 @@
             <div class="chart-block">
                 <p>
                     Fifteen named companies, each tracked individually in their own SEC filings,
-    sorted by when they dropped the language. Tesla moved first, in 2023, even
-    before the 2024 election. Most of corporate America followed between 2024
-    and 2026. Target looks like the exception — but as the note below shows,
-    even Target isn't describing ongoing DEI initiatives anymore.
+                    sorted by when they dropped the language. Tesla moved first, in 2023, even
+                    before the 2024 election. Most of corporate America followed between 2024
+                    and 2026. Target looks like the exception — but as the note below shows,
+                    even Target isn't describing ongoing DEI initiatives anymore.
                 </p>
                 <figure id="chartLocation4"></figure>
                 <details>
@@ -354,19 +339,20 @@
                         or "DEI."
                     </p>
                 </details>
-            </div>
 
-            <div class="pull-quote">
-    "We modified and concluded certain of our initiatives related to diversity,
-    equity, and inclusion, which resulted in adverse reactions..."
-    <cite>— Target Corporation, 2025 Form 10-K, risk factors section</cite>
-</div>
-<p>
-    Even Target — the <strong>one company</strong> that still shows up as "mentioning" DEI in
-    2025 and 2026 — isn't describing ongoing initiatives anymore. The phrase
-    now appears in a different context: explaining the shareholder
-    lawsuits and consumer boycotts that followed Target's own rollback.
-</p>
+                <div class="chart-block">
+                <div class="pull-quote">
+                    "We modified and concluded certain of our initiatives related to diversity,
+                    equity, and inclusion, which resulted in adverse reactions..."
+                    <cite>— Target Corporation, 2025 Form 10-K, risk factors section</cite>
+                </div>
+                <p>
+                    Even Target — the <strong>one company</strong> that still shows up as "mentioning" DEI in
+                    2025 and 2026 — isn't describing ongoing initiatives anymore. The phrase
+                    now appears in a different context: explaining the shareholder
+                    lawsuits and consumer boycotts that followed Target's own rollback.
+                </p>
+            </div>
 
         </section>
 
@@ -383,11 +369,8 @@
     </main>
 
     <script>
-        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sp500_overview.vl.json";
-vegaEmbed('#chartLocation1', chart1)
-
-let chartLookup = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_lookup.vl.json";
-vegaEmbed('#chartLocationLookup', chartLookup)
+        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
+        vegaEmbed('#chartLocation1', chart1)
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
         vegaEmbed('#chartLocation2', chart2)
