@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 220,
-  "padding": {"top": 25, "left": 5, "right": 5, "bottom": 5},
+  "height": 140,
+  "padding": {"top": 25, "left": 5, "right": 5, "bottom": 0},
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -541,7 +541,8 @@
         "labelAngle": 0,
         "orient": "top",
         "offset": 2
-      }
+      },
+      "scale": {"paddingInner": 0.1, "paddingOuter": 0.1}
     },
     "color": {
       "field": "mentioned",
@@ -593,4 +594,5 @@
       "titleFontSize": 13
     }
   }
+}
 }
