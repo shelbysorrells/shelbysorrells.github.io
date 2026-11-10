@@ -1,17 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Look Up Any S&P 500 Company",
-    "subtitle": "Did this company's 10-K mention \"diversity, equity, and inclusion\" or \"DEI\" that year?",
-    "anchor": "start",
-    "font": "Merriweather, serif",
-    "fontSize": 16,
-    "subtitleFontSize": 12,
-    "color": "#1A1A1A",
-    "subtitleColor": "#5A5A5A"
-  },
   "width": "container",
-  "height": 240,
+  "height": 180,
   "autosize": {
     "type": "fit",
     "contains": "padding"
