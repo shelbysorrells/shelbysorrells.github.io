@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Half the S&P 500 Used This Language — Now Fewer Than 1 in 10 Do",
+    "subtitle": "% of S&P 500 companies whose 10-K mentioned \"diversity, equity, and inclusion\" or \"DEI\"",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 320,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/sp500_pct_by_year.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "pct_mentioning",
+      "type": "quantitative",
+      "title": "% of S&P 500 companies",
+      "scale": {"domain": [0, 60]}
+    },
+    "color": {"value": "#1B3A57"},
+    "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "pct_mentioning", "type": "quantitative", "title": "% mentioning"},
+      {"field": "count_mentioning", "type": "quantitative", "title": "# of companies"},
+      {"field": "total_companies", "type": "quantitative", "title": "Total tracked"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "bar", "size": 75}},
+    {
+      "mark": {"type": "text", "dy": -12, "fontWeight": "bold", "fontSize": 14, "color": "#1A1A1A"},
+      "encoding": {
+        "text": {"field": "pct_mentioning", "type": "quantitative", "format": ".1f"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 14,
+      "labelColor": "#2A2A2A",
+      "domainColor": "#CCCCCC",
+      "tickColor": "#CCCCCC",
+      "gridDash": [2, 3],
+      "gridColor": "#DDDDDD",
+      "gridOpacity": 0.7
+    }
+  }
+}
