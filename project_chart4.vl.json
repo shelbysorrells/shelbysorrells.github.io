@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Most Dropped the Language — One Didn't",
+    "text": "Most Dropped the Language — One Household Name Didn't",
     "subtitle": "Did the company's 10-K mention \"diversity, equity, and inclusion\" or \"DEI\" that year?",
     "anchor": "start",
     "font": "Merriweather, serif",
