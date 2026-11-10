@@ -1,0 +1,257 @@
+[
+  {
+    "state": "AL",
+    "filings_2024": 9,
+    "filings_2026": 2
+  },
+  {
+    "state": "AK",
+    "filings_2024": 1,
+    "filings_2026": 0
+  },
+  {
+    "state": "AZ",
+    "filings_2024": 15,
+    "filings_2026": 3
+  },
+  {
+    "state": "AR",
+    "filings_2024": 3,
+    "filings_2026": 0
+  },
+  {
+    "state": "CA",
+    "filings_2024": 188,
+    "filings_2026": 65
+  },
+  {
+    "state": "CO",
+    "filings_2024": 25,
+    "filings_2026": 14
+  },
+  {
+    "state": "CT",
+    "filings_2024": 27,
+    "filings_2026": 7
+  },
+  {
+    "state": "DE",
+    "filings_2024": 6,
+    "filings_2026": 2
+  },
+  {
+    "state": "FL",
+    "filings_2024": 35,
+    "filings_2026": 8
+  },
+  {
+    "state": "GA",
+    "filings_2024": 34,
+    "filings_2026": 7
+  },
+  {
+    "state": "HI",
+    "filings_2024": 4,
+    "filings_2026": 0
+  },
+  {
+    "state": "ID",
+    "filings_2024": 3,
+    "filings_2026": 1
+  },
+  {
+    "state": "IL",
+    "filings_2024": 60,
+    "filings_2026": 15
+  },
+  {
+    "state": "IN",
+    "filings_2024": 12,
+    "filings_2026": 5
+  },
+  {
+    "state": "IA",
+    "filings_2024": 8,
+    "filings_2026": 2
+  },
+  {
+    "state": "KS",
+    "filings_2024": 6,
+    "filings_2026": 1
+  },
+  {
+    "state": "KY",
+    "filings_2024": 7,
+    "filings_2026": 0
+  },
+  {
+    "state": "LA",
+    "filings_2024": 4,
+    "filings_2026": 1
+  },
+  {
+    "state": "ME",
+    "filings_2024": 4,
+    "filings_2026": 1
+  },
+  {
+    "state": "MD",
+    "filings_2024": 18,
+    "filings_2026": 6
+  },
+  {
+    "state": "MA",
+    "filings_2024": 65,
+    "filings_2026": 36
+  },
+  {
+    "state": "MI",
+    "filings_2024": 24,
+    "filings_2026": 6
+  },
+  {
+    "state": "MN",
+    "filings_2024": 23,
+    "filings_2026": 10
+  },
+  {
+    "state": "MS",
+    "filings_2024": 2,
+    "filings_2026": 2
+  },
+  {
+    "state": "MO",
+    "filings_2024": 11,
+    "filings_2026": 4
+  },
+  {
+    "state": "MT",
+    "filings_2024": 1,
+    "filings_2026": 0
+  },
+  {
+    "state": "NE",
+    "filings_2024": 5,
+    "filings_2026": 1
+  },
+  {
+    "state": "NV",
+    "filings_2024": 13,
+    "filings_2026": 7
+  },
+  {
+    "state": "NH",
+    "filings_2024": 6,
+    "filings_2026": 0
+  },
+  {
+    "state": "NJ",
+    "filings_2024": 28,
+    "filings_2026": 10
+  },
+  {
+    "state": "NM",
+    "filings_2024": 1,
+    "filings_2026": 0
+  },
+  {
+    "state": "NY",
+    "filings_2024": 147,
+    "filings_2026": 43
+  },
+  {
+    "state": "NC",
+    "filings_2024": 32,
+    "filings_2026": 4
+  },
+  {
+    "state": "ND",
+    "filings_2024": 2,
+    "filings_2026": 0
+  },
+  {
+    "state": "OH",
+    "filings_2024": 43,
+    "filings_2026": 5
+  },
+  {
+    "state": "OK",
+    "filings_2024": 6,
+    "filings_2026": 1
+  },
+  {
+    "state": "OR",
+    "filings_2024": 6,
+    "filings_2026": 1
+  },
+  {
+    "state": "PA",
+    "filings_2024": 51,
+    "filings_2026": 10
+  },
+  {
+    "state": "RI",
+    "filings_2024": 5,
+    "filings_2026": 1
+  },
+  {
+    "state": "SC",
+    "filings_2024": 5,
+    "filings_2026": 0
+  },
+  {
+    "state": "SD",
+    "filings_2024": 1,
+    "filings_2026": 0
+  },
+  {
+    "state": "TN",
+    "filings_2024": 18,
+    "filings_2026": 2
+  },
+  {
+    "state": "TX",
+    "filings_2024": 85,
+    "filings_2026": 20
+  },
+  {
+    "state": "UT",
+    "filings_2024": 12,
+    "filings_2026": 3
+  },
+  {
+    "state": "VT",
+    "filings_2024": 1,
+    "filings_2026": 0
+  },
+  {
+    "state": "VA",
+    "filings_2024": 29,
+    "filings_2026": 13
+  },
+  {
+    "state": "WA",
+    "filings_2024": 23,
+    "filings_2026": 6
+  },
+  {
+    "state": "WV",
+    "filings_2024": 3,
+    "filings_2026": 1
+  },
+  {
+    "state": "WI",
+    "filings_2024": 19,
+    "filings_2026": 4
+  },
+  {
+    "state": "WY",
+    "filings_2024": 0,
+    "filings_2026": 0
+  },
+  {
+    "state": "DC",
+    "filings_2024": 7,
+    "filings_2026": 5
+  }
+]
