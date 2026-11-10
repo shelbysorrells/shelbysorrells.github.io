@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Retreat Isn't Uniform Across States",
+    "subtitle": "Change in 10-K filings mentioning \"diversity, equity, and inclusion\", Q1 2024 to Q1 2026",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 500,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "params": [
+    {
+      "name": "view_select",
+      "value": "change",
+      "bind": {
+        "input": "select",
+        "options": ["2024", "2026", "change"],
+        "labels": ["Q1 2024", "Q1 2026", "% Change"],
+        "name": "View: "
+      }
+    }
+  ],
+  "data": {
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/us-10m.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "values": [
+            {"id": 1, "state": "AL"}, {"id": 2, "state": "AK"}, {"id": 4, "state": "AZ"},
+            {"id": 5, "state": "AR"}, {"id": 6, "state": "CA"}, {"id": 8, "state": "CO"},
+            {"id": 9, "state": "CT"}, {"id": 10, "state": "DE"}, {"id": 11, "state": "DC"},
+            {"id": 12, "state": "FL"}, {"id": 13, "state": "GA"}, {"id": 15, "state": "HI"},
+            {"id": 16, "state": "ID"}, {"id": 17, "state": "IL"}, {"id": 18, "state": "IN"},
+            {"id": 19, "state": "IA"}, {"id": 20, "state": "KS"}, {"id": 21, "state": "KY"},
+            {"id": 22, "state": "LA"}, {"id": 23, "state": "ME"}, {"id": 24, "state": "MD"},
+            {"id": 25, "state": "MA"}, {"id": 26, "state": "MI"}, {"id": 27, "state": "MN"},
+            {"id": 28, "state": "MS"}, {"id": 29, "state": "MO"}, {"id": 30, "state": "MT"},
+            {"id": 31, "state": "NE"}, {"id": 32, "state": "NV"}, {"id": 33, "state": "NH"},
+            {"id": 34, "state": "NJ"}, {"id": 35, "state": "NM"}, {"id": 36, "state": "NY"},
+            {"id": 37, "state": "NC"}, {"id": 38, "state": "ND"}, {"id": 39, "state": "OH"},
+            {"id": 40, "state": "OK"}, {"id": 41, "state": "OR"}, {"id": 42, "state": "PA"},
+            {"id": 44, "state": "RI"}, {"id": 45, "state": "SC"}, {"id": 46, "state": "SD"},
+            {"id": 47, "state": "TN"}, {"id": 48, "state": "TX"}, {"id": 49, "state": "UT"},
+            {"id": 50, "state": "VT"}, {"id": 51, "state": "VA"}, {"id": 53, "state": "WA"},
+            {"id": 54, "state": "WV"}, {"id": 55, "state": "WI"}, {"id": 56, "state": "WY"}
+          ]
+        },
+        "key": "id",
+        "fields": ["state"]
+      }
+    },
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_state.json"
+        },
+        "key": "state",
+        "fields": ["filings_2024", "filings_2026"]
+      }
+    },
+    {
+      "calculate": "datum.filings_2024 > 0 ? (datum.filings_2026 - datum.filings_2024) / datum.filings_2024 * 100 : null",
+      "as": "pct_change"
+    },
+    {
+      "calculate": "view_select == '2024' ? datum.filings_2024 : view_select == '2026' ? datum.filings_2026 : datum.pct_change",
+      "as": "display_value"
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "#F7F7F8", "strokeWidth": 0.5},
+  "projection": {"type": "albersUsa"},
+  "encoding": {
+    "color": {
+      "field": "display_value",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "legend": {"title": "Selected value (see dropdown)"}
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State"},
+      {"field": "filings_2024", "type": "quantitative", "title": "Filings, Q1 2024"},
+      {"field": "filings_2026", "type": "quantitative", "title": "Filings, Q1 2026"},
+      {"field": "pct_change", "type": "quantitative", "title": "% change", "format": ".1f"}
+    ]
+  },
+  "config": {
+    "font": "Inter, sans-serif",
+    "legend": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 12,
+      "titleFont": "Merriweather, serif",
+      "titleFontSize": 13
+    }
+  }
+}
