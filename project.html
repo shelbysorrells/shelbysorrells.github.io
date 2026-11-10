@@ -289,6 +289,40 @@
                     </p>
                 </details>
             </div>
+            
+            <div class="chart-block">
+    <p>
+        Eight named companies, tracked individually in their own SEC filings. Most
+        dropped DEI language somewhere between 2024 and 2026 — but Target is the
+        exception, using the phrase in every single filing through 2026, even as
+        Apple and Costco (both publicly described in early reporting as DEI
+        "defenders") quietly dropped the language from their own legal filings
+        around the same time.
+    </p>
+    <figure id="chartLocation4"></figure>
+    <details>
+        <summary>Notes for replication</summary>
+        <p>
+            Target, Walmart, Apple,
+            Costco, JPMorgan Chase, Citigroup, Microsoft, and Intel were the specific
+            companies analyzed in a Harvard Law School corporate governance report
+            studying DEI disclosure trends; Meta and Alphabet were independently named
+            across multiple news outlets (TechCrunch, Fortune, Axios) as companies that
+            had publicly announced DEI policy rollbacks. All were then tested the same
+            way.
+        </p>
+        <p>
+            Each company's 10-K filings queried individually by CIK (SEC's company
+            identifier) via the EDGAR full-text search API, checking each full calendar
+            year for either the phrase "diversity, equity, and inclusion" or the
+            initialism "DEI." Three companies tested (Microsoft, Intel, ExxonMobil)
+            showed no match in any year under either term and were excluded from this
+            chart, since this almost certainly reflects different company-specific
+            wording rather than a genuine absence of DEI language — a limitation worth
+            noting for any full-text search approach like this one.
+        </p>
+    </details>
+</div>
 
         </section>
 
@@ -313,6 +347,9 @@
 
         let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
         vegaEmbed('#chartLocation3', chart3)
+
+        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
+vegaEmbed('#chartLocation4', chart4)
     </script>
 
 </body>
