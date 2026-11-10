@@ -253,6 +253,31 @@
     </details>
 </div>
 
+            <div class="chart-block">
+    <h3>The Retreat Isn't Uniform Across States</h3>
+    <p>
+        The "% Change" view shows which states saw the sharpest collapse in DEI language, relative to their own
+        starting point. The "Q1 2024" and "Q1 2026" views show the underlying raw
+        counts behind that calculation — useful for checking the actual numbers, but
+        since each map rescales its own colors to its own range, the geographic pattern
+        looks deceptively similar between the two years even though the actual counts
+        fell dramatically everywhere.
+    </p>
+    <figure id="chartLocation2"></figure>
+    <details>
+        <summary>Notes for replication</summary>
+        <p>
+            State-level filing counts gathered via the SEC EDGAR full-text search API,
+            querying each US state individually using the locationCodes parameter
+            (filtering by principal business address) to get an exact count per state,
+            rather than relying on the API's own aggregation feature, which caps out at
+            roughly 30 states. Data was collected via a Python script run in Google
+            Colab due to the same CORS restriction noted in the first chart. US state
+            boundaries from the vega-datasets project; state FIPS codes manually mapped
+            to postal abbreviations to join the two datasets.
+        </p>
+    </details>
+</div>
         </section>
 
         <section id="tools">
