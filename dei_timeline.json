@@ -1,6 +1,5 @@
 [
   {"date": "2025-01-10", "label": "Meta announces end of DEI programs", "type": "Corporate"},
-  {"date": "2025-01-20", "label": "EO 14151: ends DEI in federal government", "type": "Government"},
-  {"date": "2025-01-21", "label": "EO 14173: extends to private sector", "type": "Government"},
+  {"date": "2025-01-20", "label": "Trump signs executive orders ending DEI government-wide", "type": "Government"},
   {"date": "2025-02-07", "label": "Amazon removes DEI language from 10-K", "type": "Corporate"}
 ]
