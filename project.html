@@ -333,6 +333,29 @@
             this method cannot distinguish.
         </p>
     </details>
+
+               <div class="chart-block">
+    <p>
+        Every sector retreated, but not equally. Real Estate collapsed almost
+        completely (53.3% to 3.3%), while Communication Services held on the
+        longest — still at 21.1% in 2026, roughly double the rate of every other
+        sector. With 19 to 83 companies tracked per sector, this is a large enough
+        sample to say the pattern is real, not noise.
+    </p>
+    <figure id="chartLocationSector"></figure>
+    <details>
+        <summary>Notes for replication</summary>
+        <p>
+            GICS sector classifications for all 500 companies come from the same
+            public S&P 500 dataset used elsewhere in this project
+            (datasets/s-and-p-500-companies on GitHub), joined to the DEI mention
+            data by company name. Percentages reflect the share of each sector's
+            companies whose 10-K mentioned "diversity, equity, and inclusion" or
+            "DEI" that year.
+        </p>
+    </details>
+</div>
+               
 </div>
 
             <div class="chart-block">
@@ -444,6 +467,9 @@
 
         let chartLookup = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_lookup.vl.json";
         vegaEmbed('#chartLocationLookup', chartLookup)
+
+        let chartSector = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sector.vl.json";
+vegaEmbed('#chartLocationSector', chartSector)
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
         vegaEmbed('#chartLocation2', chart2)
