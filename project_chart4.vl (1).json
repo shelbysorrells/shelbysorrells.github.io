@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Most Dropped the Language — One Household Name Didn't",
+    "subtitle": "Did the company's 10-K mention \"diversity, equity, and inclusion\" or \"DEI\" that year?",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 320,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_company_mentions.json"
+  },
+  "mark": {"type": "square", "size": 850},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {"labelAngle": 0, "orient": "top"}
+    },
+    "y": {
+      "field": "company",
+      "type": "nominal",
+      "title": null,
+      "sort": ["Meta", "Alphabet", "Apple", "Costco", "Citigroup", "JPMorgan Chase", "Walmart", "Target"]
+    },
+    "color": {
+      "field": "mentioned",
+      "type": "nominal",
+      "scale": {
+        "domain": [true, false],
+        "range": ["#1B3A57", "#D8DEE2"]
+      },
+      "legend": {"title": "Mentioned", "labelExpr": "datum.label == 'true' ? 'Yes' : 'No'"}
+    },
+    "tooltip": [
+      {"field": "company", "type": "nominal", "title": "Company"},
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "mentioned", "type": "nominal", "title": "Mentioned DEI language"}
+    ]
+  },
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#2A2A2A"
+    },
+    "legend": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 12,
+      "titleFont": "Merriweather, serif",
+      "titleFontSize": 13
+    }
+  }
+}
