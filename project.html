@@ -110,7 +110,7 @@
             margin: 20px 0;
         }
 
-        .info-box h3 {
+        .info-box h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.2rem;
             margin-top: 0;
@@ -213,9 +213,8 @@
         </section>
 
         <section id="data">
-    
             <div class="info-box">
-                        <h2>The Data</h2>
+                <h2>The Data</h2>
                 <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
             </div>
         </section>
@@ -289,40 +288,37 @@
                     </p>
                 </details>
             </div>
-            
+
             <div class="chart-block">
-    <p>
-        Eight named companies, tracked individually in their own SEC filings. Most
-        dropped DEI language somewhere between 2024 and 2026 — but Target is the
-        exception, using the phrase in every single filing through 2026, even as
-        Apple and Costco (both publicly described in early reporting as DEI
-        "defenders") quietly dropped the language from their own legal filings
-        around the same time.
-    </p>
-    <figure id="chartLocation4"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Target, Walmart, Apple,
-            Costco, JPMorgan Chase, Citigroup, Microsoft, and Intel were the specific
-            companies analyzed in a Harvard Law School corporate governance report
-            studying DEI disclosure trends; Meta and Alphabet were independently named
-            across multiple news outlets (TechCrunch, Fortune, Axios) as companies that
-            had publicly announced DEI policy rollbacks. All were then tested the same
-            way.
-        </p>
-        <p>
-            Each company's 10-K filings queried individually by CIK (SEC's company
-            identifier) via the EDGAR full-text search API, checking each full calendar
-            year for either the phrase "diversity, equity, and inclusion" or the
-            initialism "DEI." Three companies tested (Microsoft, Intel, ExxonMobil)
-            showed no match in any year under either term and were excluded from this
-            chart, since this almost certainly reflects different company-specific
-            wording rather than a genuine absence of DEI language — a limitation worth
-            noting for any full-text search approach like this one.
-        </p>
-    </details>
-</div>
+                <p>
+                    Fifteen named companies, each tracked individually in their own SEC filings,
+                    sorted by when they dropped the language. Tesla moved first, in 2023, even
+                    before the 2024 election. Most of corporate America followed between 2024
+                    and 2026. Target is the sole holdout, using the phrase in every filing
+                    through 2026.
+                </p>
+                <figure id="chartLocation4"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        23 companies were tested in total, drawn from a Harvard Law School
+                        corporate governance report on DEI disclosure and multiple news outlets
+                        (TechCrunch, Fortune, Axios) reporting on specific companies' DEI
+                        rollbacks. Eight (Microsoft, Intel, ExxonMobil, Lowe's, Boeing,
+                        UnitedHealth Group, Kroger, General Electric) showed zero mentions in
+                        every single year under either search term and were excluded from this
+                        chart, since this almost certainly reflects different company-specific
+                        wording rather than a genuine absence of DEI language — a limitation
+                        worth noting for any full-text search approach like this one.
+                    </p>
+                    <p>
+                        Each company's 10-K filings queried individually by CIK (SEC's company
+                        identifier) via the EDGAR full-text search API, checking each full
+                        calendar year for either the phrase "diversity, equity, and inclusion"
+                        or "DEI."
+                    </p>
+                </details>
+            </div>
 
         </section>
 
@@ -349,7 +345,7 @@
         vegaEmbed('#chartLocation3', chart3)
 
         let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
-vegaEmbed('#chartLocation4', chart4)
+        vegaEmbed('#chartLocation4', chart4)
     </script>
 
 </body>
