@@ -15,7 +15,7 @@
   "autosize": {"type": "fit", "contains": "padding"},
   "background": "#F7F7F8",
   "data": {
-    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_quarter (1).json"
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_by_quarter.json"
   },
   "transform": [
     {"filter": "datum.quarter == '2024 Q1' || datum.quarter == '2025 Q1' || datum.quarter == '2026 Q1'"}
