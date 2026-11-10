@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>">
+    <title>The Great Scrubbing: How DEI Language Disappeared from Corporate America</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F7F8;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 20px 24px;
+            text-align: center;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        header .site-name {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        header nav a {
+            color: #1B3A57;
+            text-decoration: none;
+            margin: 0 14px;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 24px 80px 24px;
+        }
+
+        .title-block {
+            text-align: center;
+            margin: 60px 0 40px 0;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #1A1A1A;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #5A5A5A;
+            margin: 0;
+        }
+
+        .hero-photo {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 50px;
+        }
+
+        .photo-caption {
+            font-size: 0.85rem;
+            color: #8A8A8A;
+            margin-top: -40px;
+            margin-bottom: 50px;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.7rem;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.05rem;
+            color: #2A2A2A;
+        }
+
+        .info-box {
+            background: #EAEAEA;
+            padding: 28px 32px;
+            margin: 20px 0;
+        }
+
+        .info-box h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .info-box a {
+            color: #1B3A57;
+        }
+
+        .chart-block {
+            margin-top: 56px;
+        }
+
+        .chart-block p {
+            margin-bottom: 30px;
+        }
+
+        .chart-block figure {
+            margin: 0;
+            width: 100%;
+        }
+
+        .chart-block .vega-embed {
+            width: 100% !important;
+        }
+
+        .placeholder {
+            font-style: italic;
+            color: #8A8A8A;
+            background: #EAEAEA;
+            padding: 16px 20px;
+        }
+
+        details {
+            margin-top: 16px;
+            background: #EAEAEA;
+            padding: 14px 20px;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+
+        details p {
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .pull-quote {
+            background: #EAEAEA;
+            padding: 28px 32px;
+            margin: 32px 0 20px 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1A1A1A;
+            line-height: 1.5;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 14px;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #5A5A5A;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="site-name">Shelby Sorrells</div>
+        <nav>
+            <a href="index.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/shelby-sorrells/">LinkedIn</a>
+            <a href="https://www.github.com/shelbysorrells">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="title-block">
+            <h1>The Great Scrubbing</h1>
+            <p class="subtitle">How DEI language disappeared from corporate America's SEC filings</p>
+        </div>
+
+        <img src="people-crossing-busy-street-new-york-city.jpg" class="hero-photo" alt="People crossing a busy street in New York City">
+        <p class="photo-caption">Photo via Magnific (Premium license)</p>
+
+        <section id="aims">
+            <h2>Aims</h2>
+            <p>
+                In 2025, companies across the US quietly began removing references to
+                diversity, equity, and inclusion from their public communications — but
+                how much of that retreat actually reached the one place companies can't
+                easily spin: their legally mandated disclosures to investors? This project
+                asks a specific, countable question: did the exact language companies use
+                in SEC filings measurably change after the 2024 US election and the Trump
+                administration's subsequent anti-DEI executive orders, and if so, how fast
+                and how far?
+            </p>
+            <p>
+                Using the SEC's EDGAR full-text search system — which indexes the complete
+                text of every public filing since 2001 — I track how often specific terms
+                ("diversity, equity, and inclusion," "ESG," "climate risk") appear in annual
+                10-K filings, before and after this political shift.
+            </p>
+            <p>
+                This matters because SEC filings are the one corporate communication channel
+                where companies face real legal exposure for misstatement, making any
+                detectable shift in language a meaningful signal of how deeply political
+                pressure has reached into formal corporate governance, not just public
+                messaging.
+            </p>
+        </section>
+
+        <section id="data">
+            <div class="info-box">
+                <h2>The Data</h2>
+                <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
+            </div>
+        </section>
+
+        <section id="charts">
+
+            <div class="chart-block">
+                <p>
+                    Across the full S&P 500, roughly half of companies' 10-Ks mentioned
+                    "diversity, equity, and inclusion" or "DEI" every year from 2022 through
+                    2024. By 2026, fewer than 1 in 10 still did.
+                </p>
+                <figure id="chartLocation1"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Covers all 500 companies currently in the S&P 500 index, each queried
+                        individually by CIK via the EDGAR full-text search API, checking each
+                        full calendar year for either the phrase "diversity, equity, and
+                        inclusion" or the initialism "DEI." The S&P 500 company list and CIK
+                        numbers come from a public, open-license dataset maintained on GitHub
+                        (datasets/s-and-p-500-companies), cross-referenced with SEC's own CIK
+                        records.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <p>
+                    Curious about a specific company? Search any S&P 500 company below to see
+                    its own year-by-year record.
+                </p>
+                <figure id="chartLocationLookup"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Same dataset and method as above, shown per company. A company showing
+                        "No" in every year may genuinely never have used DEI-related language —
+                        or may simply have used different wording throughout (e.g. "inclusion
+                        and diversity" rather than "diversity, equity, and inclusion"), which
+                        this method cannot distinguish.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <p>
+                    The "% Change" view
+                    shows which states saw the sharpest collapse in DEI language, relative to
+                    their own starting point. The "Q1 2024" and "Q1 2026" views show the
+                    underlying raw counts behind that calculation.
+                </p>
+                <figure id="chartLocation2"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        State-level filing counts gathered via the SEC EDGAR full-text search
+                        API, querying each US state individually using the locationCodes
+                        parameter (filtering by principal business address) to get an exact
+                        count per state, rather than relying on the API's own aggregation
+                        feature, which caps out at roughly 30 states. Data was collected via a
+                        Python script run in Google Colab due to the same CORS restriction
+                        noted above. US state boundaries from the vega-datasets project; state
+                        FIPS codes manually mapped to postal abbreviations to join the two
+                        datasets.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <p>
+                    ESG and climate-risk language declined too, but far more gently than DEI,
+                    suggesting companies weren't just growing cautious about political language
+                    in general. DEI specifically was the target.
+                </p>
+                <figure id="chartLocation3"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Each term is shown as a percentage of its own historical peak (2023 for
+                        DEI and ESG; 2024 for Climate Risk), since the three terms appear in
+                        very different numbers of filings to begin with — normalizing lets the
+                        shape of each term's rise and reversal be compared directly. Data
+                        gathered via the SEC EDGAR full-text search API, same method as the
+                        first chart.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <p>
+                    Fifteen named companies, each tracked individually in their own SEC filings,
+                    sorted by when they dropped the language. Tesla moved first, in 2023, even
+                    before the 2024 election. Most of corporate America followed between 2024
+                    and 2026. Target looks like the exception — but as the note below shows,
+                    even Target isn't describing ongoing DEI initiatives anymore.
+                </p>
+                <figure id="chartLocation4"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        23 companies were tested in total, drawn from a Harvard Law School
+                        corporate governance report on DEI disclosure and multiple news outlets
+                        (TechCrunch, Fortune, Axios) reporting on specific companies' DEI
+                        rollbacks. Eight (Microsoft, Intel, ExxonMobil, Lowe's, Boeing,
+                        UnitedHealth Group, Kroger, General Electric) showed zero mentions in
+                        every single year under either search term and were excluded from this
+                        chart, since this almost certainly reflects different company-specific
+                        wording rather than a genuine absence of DEI language — a limitation
+                        worth noting for any full-text search approach like this one.
+                    </p>
+                    <p>
+                        Each company's 10-K filings queried individually by CIK (SEC's company
+                        identifier) via the EDGAR full-text search API, checking each full
+                        calendar year for either the phrase "diversity, equity, and inclusion"
+                        or "DEI."
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <div class="pull-quote">
+                    "We modified and concluded certain of our initiatives related to diversity,
+                    equity, and inclusion, which resulted in adverse reactions..."
+                    <cite>— Target Corporation, 2025 Form 10-K, risk factors section</cite>
+                </div>
+                <p>
+                    Even Target — the <strong>one company</strong> that still shows up as "mentioning" DEI in
+                    2025 and 2026 — isn't describing ongoing initiatives anymore. The phrase
+                    now appears in a different context: explaining the shareholder
+                    lawsuits and consumer boycotts that followed Target's own rollback.
+                </p>
+            </div>
+
+        </section>
+
+        <section id="tools">
+            <h2>Tools</h2>
+            <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
+        </section>
+
+        <section id="conclusions">
+            <h2>Conclusions</h2>
+            <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
+        </section>
+
+    </main>
+
+    <script>
+        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sp500_overview.vl.json";
+        vegaEmbed('#chartLocation1', chart1)
+
+        let chartLookup = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_lookup.vl.json";
+        vegaEmbed('#chartLocationLookup', chartLookup)
+
+        let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
+        vegaEmbed('#chartLocation2', chart2)
+
+        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
+        vegaEmbed('#chartLocation3', chart3)
+
+        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
+        vegaEmbed('#chartLocation4', chart4)
+    </script>
+
+</body>
+</html>
