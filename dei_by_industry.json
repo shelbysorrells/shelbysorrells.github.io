@@ -1,0 +1,22 @@
+[
+  {"industry": "Pharmaceuticals", "year": "2024", "filings": 90},
+  {"industry": "Pharmaceuticals", "year": "2026", "filings": 41},
+  {"industry": "State Commercial Banks", "year": "2024", "filings": 67},
+  {"industry": "State Commercial Banks", "year": "2026", "filings": 24},
+  {"industry": "Real Estate Investment Trusts", "year": "2024", "filings": 65},
+  {"industry": "Real Estate Investment Trusts", "year": "2026", "filings": 23},
+  {"industry": "Software", "year": "2024", "filings": 60},
+  {"industry": "Software", "year": "2026", "filings": 13},
+  {"industry": "National Commercial Banks", "year": "2024", "filings": 40},
+  {"industry": "National Commercial Banks", "year": "2026", "filings": 7},
+  {"industry": "Investment Advice", "year": "2024", "filings": 30},
+  {"industry": "Investment Advice", "year": "2026", "filings": 18},
+  {"industry": "Biological Products", "year": "2024", "filings": 28},
+  {"industry": "Biological Products", "year": "2026", "filings": 15},
+  {"industry": "Fire, Marine and Casualty Insurance", "year": "2024", "filings": 28},
+  {"industry": "Fire, Marine and Casualty Insurance", "year": "2026", "filings": 5},
+  {"industry": "Crude Petroleum and Natural Gas", "year": "2024", "filings": 18},
+  {"industry": "Crude Petroleum and Natural Gas", "year": "2026", "filings": 4},
+  {"industry": "Medical Instruments", "year": "2024", "filings": 31},
+  {"industry": "Medical Instruments", "year": "2026", "filings": 9}
+]
