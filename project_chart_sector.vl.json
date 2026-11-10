@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Retreat, Sector by Sector",
+    "subtitle": "% of S&P 500 companies mentioning DEI language, by sector (2022 vs. 2026)",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 420,
+  "padding": {"top": 10, "left": 5, "right": 20, "bottom": 5},
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_by_sector.json"
+  },
+  "encoding": {
+    "y": {
+      "field": "sector",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "pct_mentioning", "op": "max", "order": "descending"}
+    },
+    "x": {
+      "field": "pct_mentioning",
+      "type": "quantitative",
+      "title": "% of sector's companies mentioning DEI language",
+      "scale": {"domain": [0, 65], "nice": false},
+      "stack": null
+    },
+    "yOffset": {"field": "year", "type": "nominal"},
+    "color": {
+      "field": "year",
+      "type": "nominal",
+      "scale": {
+        "domain": ["2022", "2026"],
+        "range": ["#E8A368", "#9A3B00"]
+      },
+      "legend": {"title": "Year", "orient": "top", "direction": "horizontal"}
+    },
+    "tooltip": [
+      {"field": "sector", "type": "nominal", "title": "Sector"},
+      {"field": "year", "type": "nominal", "title": "Year"},
+      {"field": "pct_mentioning", "type": "quantitative", "title": "% mentioning"},
+      {"field": "n_companies", "type": "quantitative", "title": "Companies in sector"}
+    ]
+  },
+  "mark": {"type": "bar"},
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#2A2A2A",
+      "domainColor": "#CCCCCC",
+      "tickColor": "#CCCCCC",
+      "gridDash": [2, 3],
+      "gridColor": "#DDDDDD",
+      "gridOpacity": 0.7
+    },
+    "legend": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 12,
+      "titleFont": "Merriweather, serif",
+      "titleFontSize": 13
+    }
+  }
+}
