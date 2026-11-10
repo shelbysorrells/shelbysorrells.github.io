@@ -1,0 +1,134 @@
+[
+  {
+    "sector": "Communication Services",
+    "year": "2022",
+    "pct_mentioning": 42.1,
+    "n_companies": 19
+  },
+  {
+    "sector": "Communication Services",
+    "year": "2026",
+    "pct_mentioning": 21.1,
+    "n_companies": 19
+  },
+  {
+    "sector": "Consumer Discretionary",
+    "year": "2022",
+    "pct_mentioning": 53.2,
+    "n_companies": 47
+  },
+  {
+    "sector": "Consumer Discretionary",
+    "year": "2026",
+    "pct_mentioning": 6.4,
+    "n_companies": 47
+  },
+  {
+    "sector": "Consumer Staples",
+    "year": "2022",
+    "pct_mentioning": 51.5,
+    "n_companies": 33
+  },
+  {
+    "sector": "Consumer Staples",
+    "year": "2026",
+    "pct_mentioning": 6.1,
+    "n_companies": 33
+  },
+  {
+    "sector": "Energy",
+    "year": "2022",
+    "pct_mentioning": 28.6,
+    "n_companies": 21
+  },
+  {
+    "sector": "Energy",
+    "year": "2026",
+    "pct_mentioning": 9.5,
+    "n_companies": 21
+  },
+  {
+    "sector": "Financials",
+    "year": "2022",
+    "pct_mentioning": 46.1,
+    "n_companies": 76
+  },
+  {
+    "sector": "Financials",
+    "year": "2026",
+    "pct_mentioning": 9.2,
+    "n_companies": 76
+  },
+  {
+    "sector": "Health Care",
+    "year": "2022",
+    "pct_mentioning": 40.0,
+    "n_companies": 60
+  },
+  {
+    "sector": "Health Care",
+    "year": "2026",
+    "pct_mentioning": 11.7,
+    "n_companies": 60
+  },
+  {
+    "sector": "Industrials",
+    "year": "2022",
+    "pct_mentioning": 45.8,
+    "n_companies": 83
+  },
+  {
+    "sector": "Industrials",
+    "year": "2026",
+    "pct_mentioning": 8.4,
+    "n_companies": 83
+  },
+  {
+    "sector": "Information Technology",
+    "year": "2022",
+    "pct_mentioning": 50.0,
+    "n_companies": 76
+  },
+  {
+    "sector": "Information Technology",
+    "year": "2026",
+    "pct_mentioning": 7.9,
+    "n_companies": 76
+  },
+  {
+    "sector": "Materials",
+    "year": "2022",
+    "pct_mentioning": 25.0,
+    "n_companies": 24
+  },
+  {
+    "sector": "Materials",
+    "year": "2026",
+    "pct_mentioning": 4.2,
+    "n_companies": 24
+  },
+  {
+    "sector": "Real Estate",
+    "year": "2022",
+    "pct_mentioning": 53.3,
+    "n_companies": 30
+  },
+  {
+    "sector": "Real Estate",
+    "year": "2026",
+    "pct_mentioning": 3.3,
+    "n_companies": 30
+  },
+  {
+    "sector": "Utilities",
+    "year": "2022",
+    "pct_mentioning": 58.1,
+    "n_companies": 31
+  },
+  {
+    "sector": "Utilities",
+    "year": "2026",
+    "pct_mentioning": 12.9,
+    "n_companies": 31
+  }
+]
