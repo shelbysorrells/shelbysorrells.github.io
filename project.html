@@ -121,19 +121,15 @@
         }
 
         .chart-block {
-            margin-top: 36px;
+            margin-top: 56px;
         }
 
-        .chart-block h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1A1A1A;
-            margin-bottom: 8px;
+        .chart-block p {
+            margin-bottom: 30px;
         }
 
         .chart-block figure {
-            margin: 16px 0 0 0;
+            margin: 0;
             width: 100%;
         }
 
@@ -205,10 +201,7 @@
                 Using the SEC's EDGAR full-text search system — which indexes the complete
                 text of every public filing since 2001 — I track how often specific terms
                 ("diversity, equity, and inclusion," "ESG," "climate risk") appear in annual
-                10-K filings, quarter by quarter, before and after this political shift. An
-                initial test of one phrase alone showed a striking year-over-year drop of
-                over 50% between Q1 2024 and Q1 2025 — large enough to warrant closer
-                examination across multiple terms and a longer time window.
+                10-K filings, before and after this political shift.
             </p>
             <p>
                 This matters because SEC filings are the one corporate communication channel
@@ -220,7 +213,7 @@
         </section>
 
         <section id="data">
-            
+            <h2>Data</h2>
             <div class="info-box">
                 <h3>The Data</h3>
                 <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
@@ -228,56 +221,75 @@
         </section>
 
         <section id="charts">
-           
-            <div class="chart-block">
-    
-    <p>
-        Mentions of "diversity, equity, and inclusion" in 10-K filings dropped from
-        1,187 in Q1 2024, to 571 in Q1 2025, to just 50 in Q1 2026.
-    </p>
-    <figure id="chartLocation1"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Data gathered via the SEC EDGAR full-text search API
-            (efts.sec.gov/LATEST/search-index), searching the exact phrase
-            "diversity, equity, and inclusion" within 10-K filings, filtered to
-            the first quarter of each year for a fair comparison (10-K filing
-            volume is heavily concentrated in Q1 due to fiscal year-end deadlines,
-            so comparing Q1-to-Q1 avoids a seasonality bias that comparing
-            different quarters would introduce). Because this API blocks direct
-            browser requests (CORS), data was collected via a Python script run in
-            Google Colab and saved as a static file.
 
+            <div class="chart-block">
+                <p>
+                    Mentions of "diversity, equity, and inclusion" in 10-K filings dropped from
+                    1,187 in Q1 2024, to 571 in Q1 2025, to just 337 in Q1 2026 — a continuous
+                    decline across three consecutive years.
                 </p>
-    </details>
-</div>
+                <figure id="chartLocation1"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Data gathered via the SEC EDGAR full-text search API
+                        (efts.sec.gov/LATEST/search-index), searching the exact phrase
+                        "diversity, equity, and inclusion" within 10-K filings, filtered to
+                        the first quarter of each year for a fair comparison (10-K filing
+                        volume is heavily concentrated in Q1 due to fiscal year-end deadlines).
+                        Because this API blocks direct browser requests (CORS), data was
+                        collected via a Python script run in Google Colab and saved as a
+                        static file. Figures reflect the index as queried on 10 November 2026;
+                        SEC's search index is periodically reprocessed, so the same historical
+                        date range can return slightly different counts if queried again later.
+                    </p>
+                </details>
+            </div>
 
             <div class="chart-block">
-    <h3>The Retreat Isn't Uniform Across States</h3>
-    <p>
-        The "% Change" view shows which states saw the sharpest collapse in DEI language, relative to their own
-        starting point. The "Q1 2024" and "Q1 2026" views show the underlying raw
-        counts behind that calculation — useful for checking the actual numbers, but
-        since each map rescales its own colors to its own range, the geographic pattern
-        looks deceptively similar between the two years even though the actual counts
-        fell dramatically everywhere.
-    </p>
-    <figure id="chartLocation2"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            State-level filing counts gathered via the SEC EDGAR full-text search API,
-            querying each US state individually using the locationCodes parameter
-            (filtering by principal business address) to get an exact count per state,
-            rather than relying on the API's own aggregation feature, which caps out at
-            roughly 30 states. Data was collected via a Python script run in Google
-            Colab due to the same CORS restriction noted in the first chart. US state
-            boundaries from the vega-datasets project; state FIPS codes manually mapped
-            to postal abbreviations to join the two datasets.
-        </p>
-    </details>
-</div>
+                <p>
+                    The "% Change" view
+                    shows which states saw the sharpest collapse in DEI language, relative to
+                    their own starting point. The "Q1 2024" and "Q1 2026" views show the
+                    underlying raw counts behind that calculation.
+                </p>
+                <figure id="chartLocation2"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        State-level filing counts gathered via the SEC EDGAR full-text search
+                        API, querying each US state individually using the locationCodes
+                        parameter (filtering by principal business address) to get an exact
+                        count per state, rather than relying on the API's own aggregation
+                        feature, which caps out at roughly 30 states. Data was collected via a
+                        Python script run in Google Colab due to the same CORS restriction
+                        noted above. US state boundaries from the vega-datasets project; state
+                        FIPS codes manually mapped to postal abbreviations to join the two
+                        datasets.
+                    </p>
+                </details>
+            </div>
+
+            <div class="chart-block">
+                <p>
+                    ESG and climate-risk language declined too, but far more gently than DEI,
+                    suggesting companies weren't just growing cautious about political language
+                    in general. DEI specifically was the target.
+                </p>
+                <figure id="chartLocation3"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Each term is shown as a percentage of its own historical peak (2023 for
+                        DEI and ESG; 2024 for Climate Risk), since the three terms appear in
+                        very different numbers of filings to begin with — normalizing lets the
+                        shape of each term's rise and reversal be compared directly. Data
+                        gathered via the SEC EDGAR full-text search API, same method as the
+                        first chart.
+                    </p>
+                </details>
+            </div>
+
         </section>
 
         <section id="tools">
@@ -294,11 +306,13 @@
 
     <script>
         let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart1.vl.json";
-vegaEmbed('#chartLocation1', chart1)
+        vegaEmbed('#chartLocation1', chart1)
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
-vegaEmbed('#chartLocation2', chart2)
-        
+        vegaEmbed('#chartLocation2', chart2)
+
+        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
+        vegaEmbed('#chartLocation3', chart3)
     </script>
 
 </body>
