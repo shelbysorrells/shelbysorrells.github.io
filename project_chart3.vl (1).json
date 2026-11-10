@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Growth Until 2024, Then a Sharp Reversal",
+    "subtitle": "10-K filings mentioning each phrase, as a % of each term's own historical peak",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 360,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {"left": 5, "right": 90, "top": 5, "bottom": 5},
+  "background": "#F7F7F8",
+  "layer": [
+    {
+      "data": {"values": [{"y1": "2024", "y2": "2026"}]},
+      "mark": {"type": "rect", "color": "#E8EEF2", "opacity": 0.6},
+      "encoding": {
+        "x": {"field": "y1", "type": "ordinal"},
+        "x2": {"field": "y2"}
+      }
+    },
+    {
+      "data": {"values": [{"year": "2025", "yval": 109, "label": "Trump 2.0 Presidency"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 11, "fontStyle": "italic", "color": "#5A5A5A"},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "yval", "type": "quantitative", "scale": {"domain": [0, 110]}},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_multi_term.json"
+      },
+      "transform": [
+        {
+          "joinaggregate": [{"op": "max", "field": "filings", "as": "term_max"}],
+          "groupby": ["term"]
+        },
+        {"calculate": "datum.filings / datum.term_max * 100", "as": "pct_of_peak"}
+      ],
+      "mark": {"type": "line", "point": {"filled": true, "size": 60}, "strokeWidth": 3.5},
+      "params": [
+        {
+          "name": "term_hover",
+          "select": {"type": "point", "fields": ["term"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "sort": ["2021", "2022", "2023", "2024", "2025", "2026"],
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "pct_of_peak",
+          "type": "quantitative",
+          "title": "% of each term's historical peak",
+          "scale": {"domain": [0, 110]}
+        },
+        "color": {
+          "field": "term",
+          "type": "nominal",
+          "scale": {
+            "domain": ["DEI", "ESG", "Climate Risk"],
+            "range": ["#1B3A57", "#6B8CAE", "#B0C4D4"]
+          },
+          "legend": null
+        },
+        "strokeDash": {
+          "field": "term",
+          "type": "nominal",
+          "scale": {
+            "domain": ["DEI", "ESG", "Climate Risk"],
+            "range": [[1, 0], [6, 3], [2, 2]]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {"param": "term_hover", "value": 1},
+          "value": 0.25
+        },
+        "tooltip": [
+          {"field": "term", "type": "nominal", "title": "Term"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "filings", "type": "quantitative", "title": "Filings"},
+          {"field": "pct_of_peak", "type": "quantitative", "title": "% of peak", "format": ".0f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_mentions_multi_term.json"
+      },
+      "transform": [
+        {
+          "joinaggregate": [{"op": "max", "field": "filings", "as": "term_max"}],
+          "groupby": ["term"]
+        },
+        {"calculate": "datum.filings / datum.term_max * 100", "as": "pct_of_peak"},
+        {"filter": "datum.year == '2026'"}
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontWeight": "bold", "fontSize": 13},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "pct_of_peak", "type": "quantitative"},
+        "text": {"field": "term", "type": "nominal"},
+        "color": {
+          "field": "term",
+          "type": "nominal",
+          "scale": {
+            "domain": ["DEI", "ESG", "Climate Risk"],
+            "range": ["#1B3A57", "#6B8CAE", "#B0C4D4"]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {"param": "term_hover", "value": 1},
+          "value": 0.25
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#2A2A2A",
+      "domainColor": "#CCCCCC",
+      "tickColor": "#CCCCCC",
+      "gridDash": [2, 3],
+      "gridColor": "#DDDDDD",
+      "gridOpacity": 0.7
+    }
+  }
+}
