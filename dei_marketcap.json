@@ -1,0 +1,10 @@
+[
+  {"company": "Apple", "market_cap_billions": 4980, "year_dropped": "2025"},
+  {"company": "Alphabet", "market_cap_billions": 3500, "year_dropped": "2025"},
+  {"company": "Meta", "market_cap_billions": 1560, "year_dropped": "2024"},
+  {"company": "Walmart", "market_cap_billions": 996, "year_dropped": "2026"},
+  {"company": "JPMorgan Chase", "market_cap_billions": 888, "year_dropped": "2026"},
+  {"company": "Costco", "market_cap_billions": 467, "year_dropped": "2025"},
+  {"company": "Citigroup", "market_cap_billions": 197, "year_dropped": "2025"},
+  {"company": "Target", "market_cap_billions": 72, "year_dropped": "Still using it"}
+]
