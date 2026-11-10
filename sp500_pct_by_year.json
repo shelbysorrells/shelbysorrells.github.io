@@ -1,0 +1,32 @@
+[
+  {
+    "year": "2022",
+    "pct_mentioning": 46.2,
+    "count_mentioning": 231,
+    "total_companies": 500
+  },
+  {
+    "year": "2023",
+    "pct_mentioning": 52.4,
+    "count_mentioning": 262,
+    "total_companies": 500
+  },
+  {
+    "year": "2024",
+    "pct_mentioning": 50.4,
+    "count_mentioning": 252,
+    "total_companies": 500
+  },
+  {
+    "year": "2025",
+    "pct_mentioning": 14.4,
+    "count_mentioning": 72,
+    "total_companies": 500
+  },
+  {
+    "year": "2026",
+    "pct_mentioning": 8.8,
+    "count_mentioning": 44,
+    "total_companies": 500
+  }
+]
