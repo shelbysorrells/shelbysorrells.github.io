@@ -283,9 +283,41 @@
 
         <section id="data">
             <div class="info-box">
-                <h2>The Data</h2>
-                <p class="placeholder">[TO WRITE — sources, access method, automation/replication notes]</p>
-            </div>
+    <h2>The Data</h2>
+    <p>
+        This project draws entirely on live, publicly accessible government and
+        open-source data — no proprietary datasets or paid APIs were used.
+    </p>
+    <p>
+        The core source is the SEC's EDGAR full-text search system
+        (efts.sec.gov), which indexes the complete text of every public company
+        filing since 2001. I queried this system directly for specific phrases
+        ("diversity, equity, and inclusion," "DEI," "ESG," "climate risk") across different filing types (10-K annual reports and
+        DEF 14A proxy statements), date ranges, and company- or state-level
+        filters, using the API's <code>locationCodes</code>, <code>ciks</code>,
+        and date-range parameters to isolate the data each chart
+        needed.
+    </p>
+    <p>
+        Because this API blocks direct requests from a browser (a security
+        measure called CORS), data for every chart on this page was collected
+        using Python scripts run in Google Colab, which queried the API
+        directly, saved the results as small static files, and uploaded those
+        files to this site's GitHub repository. Every chart reads from one of
+        these static files rather than querying SEC's servers live each time a
+        visitor loads the page — a deliberate tradeoff that keeps the page fast
+        and reliable, at the cost of the data not auto-updating after the date
+        it was collected.
+    </p>
+    <p>
+        Two supporting public datasets round out the picture: a full list of
+        S&P 500 companies, their SEC filer identifiers (CIKs), and their GICS
+        sector classifications, pulled from a public, open-license dataset
+        maintained on GitHub (datasets/s-and-p-500-companies); and SEC's
+        bulk company-to-exchange mapping file, used to identify which stock
+        exchange each company is listed on.
+    </p>
+</div>
         </section>
 
         <section id="charts">
@@ -449,9 +481,44 @@
         </section>
 
         <section id="tools">
-            <h2>Tools</h2>
-            <p class="placeholder">[TO WRITE — approach to data cleaning/analysis, challenges faced and overcome]</p>
-        </section>
+    <h2>Tools</h2>
+    <p>
+        Data collection was done in Python, run in Google Colab notebooks, since SEC's EDGAR API blocks direct requests from a
+        browser (a restriction called CORS) — Colab's Python environment isn't
+        subject to that restriction. Each script used the <code>requests</code>
+        library to query the API directly, with a short retry loop (up to three
+        attempts per request) to handle the occasional server timeout, and
+        saved results as static JSON files for the site to read from later.
+        For the two larger company datasets, scripts also wrote periodic
+        checkpoint files, so a dropped connection partway through a long run
+        (the full S&P 500 pull took roughly 45 minutes) wouldn't mean losing
+        everything already collected.
+    </p>
+    <p>
+        All charts were built in Vega-Lite, a JSON-based charting grammar, and
+        embedded directly into this page with vega-embed. Several charts use
+        Vega-Lite's interactive features beyond a static image: the state map
+        and the company lookup tool both use dropdown parameters that let a
+        reader switch what the chart displays without reloading the page, and
+        the multi-term comparison chart uses hover-based highlighting to
+        isolate one line at a time.
+    </p>
+    <p>
+        A few real challenges came up along the way. SEC's own aggregation
+        features (for breaking results down by state or industry) cap out at
+        the top 30 categories, so state-level data was instead collected by
+        querying each state individually. Company-level full-text search has a
+        real blind spot: a company using different wording than the exact
+        phrases searched for will show up as "no mentions" even if it has
+        active DEI-related language elsewhere — several companies tested
+        throughout this project (Microsoft, Intel, and others) fell into this
+        category and were excluded from charts where that would otherwise
+        mislead. And GitHub Pages, which hosts this site, caches published
+        pages for a period after each update, which occasionally made a
+        genuinely successful upload appear not to have taken effect until the
+        cache cleared.
+    </p>
+</section>
 
         <section id="conclusions">
             <h2>Conclusions</h2>
