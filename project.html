@@ -309,12 +309,13 @@
                     it was collected.
                 </p>
                 <p>
-                    Two supporting public datasets round out the picture: a full list of
+                    Three supporting public datasets round out the picture: a full list of
                     S&P 500 companies, their SEC filer identifiers (CIKs), and their GICS
                     sector classifications, pulled from a public, open-license dataset
-                    maintained on GitHub (datasets/s-and-p-500-companies); and SEC's
-                    bulk company-to-exchange mapping file, used to identify which stock
-                    exchange each company is listed on.
+                    maintained on GitHub (datasets/s-and-p-500-companies); SEC's bulk
+                    company-to-exchange mapping file, used to identify which stock exchange
+                    each company is listed on; and the Bureau of Labor Statistics' public
+                    API, used to pull monthly unemployment rates by race and nationally.
                 </p>
             </div>
         </section>
@@ -476,6 +477,29 @@
                 </p>
             </div>
 
+            <div class="chart-block">
+                <p>
+                    The administration driving this retreat has framed the economy as one of
+                    its top priorities. But in the months after corporate DEI language
+                    collapsed, the national unemployment rate stayed roughly flat — while
+                    unemployment specifically for Black workers rose sharply, widening a real
+                    economic gap at the same time words were disappearing from SEC filings.
+                </p>
+                <figure id="chartLocationUnemployment"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Monthly, seasonally adjusted unemployment rate data from the Bureau of
+                        Labor Statistics' public API (api.bls.gov): series LNS14000000
+                        (national rate), LNS14000003 (White), and LNS14000006 (Black or
+                        African American), all from the Current Population Survey. This
+                        correlation does not establish that corporate DEI retreat caused the
+                        widening gap — unemployment rates are affected by many economic
+                        factors — but the timing is notable and worth further study.
+                    </p>
+                </details>
+            </div>
+
         </section>
 
         <section id="tools">
@@ -563,6 +587,18 @@
                 lawsuits and consumer boycotts triggered by Target's own rollback.
             </p>
             <p>
+                This retreat also sits awkwardly next to the administration's own
+                stated priorities. The push against corporate DEI was framed alongside
+                a broader promise to put the economy and American workers first. But in
+                the months after that push took hold, the national unemployment rate
+                barely moved, while unemployment specifically for Black workers rose
+                sharply — widening a real economic gap at the same moment DEI language
+                was disappearing from corporate filings. This correlation doesn't prove
+                causation, but it does undercut any simple story where ending DEI
+                programs was straightforwardly good for the economy. For at least one
+                group, the opposite happened.
+            </p>
+            <p>
                 This project has real limits. Full-text search detects specific words,
                 not intent, so a company that renamed its program without changing
                 anything structural is indistinguishable here from one that eliminated
@@ -570,9 +606,8 @@
                 used the exact phrases searched for at all, meaning the true scale of
                 retreat is likely understated, not overstated. But what the data does
                 show clearly is that corporate America's retreat from DEI language was
-                faster, more institutionally reinforced, and more disconnected from
-                companies' own public statements than a simple "Trump made them do it"
-                narrative suggests.
+                faster, more institutionally reinforced, and more economically uneven
+                than a simple "Trump made them do it" narrative suggests.
             </p>
         </section>
 
@@ -596,6 +631,9 @@
 
         let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
         vegaEmbed('#chartLocation4', chart4)
+
+        let chartUnemployment = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_unemployment.vl.json";
+        vegaEmbed('#chartLocationUnemployment', chartUnemployment)
     </script>
 
 </body>
