@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Unemployment Rate by Race, 2024-2026",
+    "subtitle": "US unemployment rate: national average vs. by race, monthly, 2024-2026",
+    "anchor": "start",
+    "font": "Merriweather, serif",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#1A1A1A",
+    "subtitleColor": "#5A5A5A"
+  },
+  "width": "container",
+  "height": 340,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#F7F7F8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/bls_unemployment_combined.json?v=1"
+  },
+  "mark": {"type": "line", "point": {"filled": true, "size": 35}, "strokeWidth": 2.5},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "timeUnit": "yearmonth",
+      "title": null
+    },
+    "y": {
+      "field": "unemployment_rate",
+      "type": "quantitative",
+      "title": "Unemployment rate (%)",
+      "scale": {"domain": [0, 9]}
+    },
+    "color": {
+      "field": "race",
+      "type": "nominal",
+      "scale": {
+        "domain": ["All workers (national rate)", "White", "Black"],
+        "range": ["#AAAAAA", "#7A9CBF", "#9A3B00"]
+      },
+      "legend": {"title": null, "orient": "top", "direction": "horizontal"}
+    },
+    "tooltip": [
+      {"field": "race", "type": "nominal", "title": "Group"},
+      {"field": "date", "type": "temporal", "timeUnit": "yearmonth", "title": "Month"},
+      {"field": "unemployment_rate", "type": "quantitative", "title": "Unemployment rate"}
+    ]
+  },
+  "config": {
+    "font": "Inter, sans-serif",
+    "axis": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#2A2A2A",
+      "domainColor": "#CCCCCC",
+      "tickColor": "#CCCCCC",
+      "gridDash": [2, 3],
+      "gridColor": "#DDDDDD",
+      "gridOpacity": 0.7
+    },
+    "legend": {
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 12
+    }
+  }
+}
