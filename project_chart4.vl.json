@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Fifteen Companies, One Direction — With One Exception",
+    "text": "DEI Language Mentions by Company, 2022-2026",
     "subtitle": "Did the company's 10-K mention \"diversity, equity, and inclusion\" or \"DEI\" that year?",
     "anchor": "start",
     "font": "Merriweather, serif",
@@ -11,13 +11,13 @@
     "subtitleColor": "#5A5A5A"
   },
   "width": "container",
-  "height": 480,
+  "height": 320,
   "autosize": {"type": "fit", "contains": "padding"},
   "background": "#F7F7F8",
   "data": {
     "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_company_mentions.json"
   },
-  "mark": {"type": "square", "size": 700},
+  "mark": {"type": "square", "size": 850},
   "encoding": {
     "x": {
       "field": "year",
@@ -29,11 +29,7 @@
       "field": "company",
       "type": "nominal",
       "title": null,
-      "sort": [
-        "Tesla", "Harley-Davidson", "Meta", "Deere & Company", "Alphabet",
-        "Apple", "Costco", "Citigroup", "McDonald's", "Ford", "CVS Health",
-        "Truist Financial", "Walmart", "JPMorgan Chase", "Target"
-      ]
+      "sort": ["Meta", "Alphabet", "Apple", "Costco", "Citigroup", "JPMorgan Chase", "Walmart", "Target"]
     },
     "color": {
       "field": "mentioned",
@@ -54,7 +50,7 @@
     "font": "Inter, sans-serif",
     "axis": {
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 12,
+      "labelFontSize": 13,
       "labelColor": "#2A2A2A"
     },
     "legend": {
