@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "The Retreat Isn't Uniform Across States",
+    "text": "DEI Language in 10-K Filings, by State",
     "subtitle": "Change in 10-K filings mentioning \"diversity, equity, and inclusion\", Q1 2024 to Q1 2026",
     "anchor": "start",
     "font": "Merriweather, serif",
