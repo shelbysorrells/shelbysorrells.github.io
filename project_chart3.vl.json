@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Growth Until 2024, Then a Sharp Reversal",
+    "text": "DEI, ESG, and Climate Risk Mentions, 2021-2026",
     "subtitle": "10-K filings mentioning each phrase, as a % of each term's own historical peak",
     "anchor": "start",
     "font": "Merriweather, serif",
