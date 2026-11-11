@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Half the S&P 500 Used This Language — Now Fewer Than 1 in 10 Do",
+    "text": "% of S&P 500 Companies Mentioning DEI Language, by Year",
     "subtitle": "% of S&P 500 companies whose 10-K mentioned \"diversity, equity, and inclusion\" or \"DEI\"",
     "anchor": "start",
     "font": "Merriweather, serif",
