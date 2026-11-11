@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "The Retreat by Sector",
+    "text": "DEI Language Mentions by Sector, 2022 vs. 2026",
     "subtitle": "% of S&P 500 companies mentioning DEI language, by sector (2022 vs. 2026)",
     "anchor": "start",
     "font": "Merriweather, serif",
