@@ -15,38 +15,38 @@
     <style>
 
         .definition-box {
-    background: #EAEAEA;
-    padding: 28px 32px;
-    margin: 0 0 50px 0;
-}
+            background: #EAEAEA;
+            padding: 28px 32px;
+            margin: 0 0 50px 0;
+        }
 
-.definition-box .term {
-    font-family: 'Merriweather', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1A1A1A;
-    margin-bottom: 2px;
-}
+        .definition-box .term {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 2px;
+        }
 
-.definition-box .part-of-speech {
-    font-style: italic;
-    color: #5A5A5A;
-    font-size: 0.95rem;
-    margin-bottom: 14px;
-}
+        .definition-box .part-of-speech {
+            font-style: italic;
+            color: #5A5A5A;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
 
-.definition-box .definition-text {
-    font-size: 1.05rem;
-    color: #2A2A2A;
-    margin-bottom: 14px;
-}
+        .definition-box .definition-text {
+            font-size: 1.05rem;
+            color: #2A2A2A;
+            margin-bottom: 14px;
+        }
 
-.definition-box .citation {
-    font-size: 0.8rem;
-    color: #8A8A8A;
-    font-style: italic;
-}
-        
+        .definition-box .citation {
+            font-size: 0.8rem;
+            color: #8A8A8A;
+            font-style: italic;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -241,21 +241,20 @@
         <p class="photo-caption">Photo via Magnific (Premium license)</p>
 
         <div class="definition-box">
-    <div class="term">DEI</div>
-    <div class="part-of-speech">noun — "diversity, equity, and inclusion"</div>
-    <p class="definition-text">
-        A conceptual framework that promotes the fair treatment and full
-        participation of all people, particularly in workplaces, including
-        groups that have historically faced underrepresentation or
-        discrimination based on background, identity, or disability.
-    </p>
-    <p class="citation">
-        Source: Dictionary.com.
-    </p>
-</div>
+            <div class="term">DEI</div>
+            <div class="part-of-speech">noun — "diversity, equity, and inclusion"</div>
+            <p class="definition-text">
+                A conceptual framework that promotes the fair treatment and full
+                participation of all people, particularly in workplaces, including
+                groups that have historically faced underrepresentation or
+                discrimination based on background, identity, or disability.
+            </p>
+            <p class="citation">
+                Source: Dictionary.com.
+            </p>
+        </div>
 
         <section id="aims">
-   
             <p>
                 In 2025, companies across the US quietly began removing references to
                 diversity, equity, and inclusion from their public communications — but
@@ -283,41 +282,41 @@
 
         <section id="data">
             <div class="info-box">
-    <h2>The Data</h2>
-    <p>
-        This project draws entirely on live, publicly accessible government and
-        open-source data — no proprietary datasets or paid APIs were used.
-    </p>
-    <p>
-        The core source is the SEC's EDGAR full-text search system
-        (efts.sec.gov), which indexes the complete text of every public company
-        filing since 2001. I queried this system directly for specific phrases
-        ("diversity, equity, and inclusion," "DEI," "ESG," "climate risk") across different filing types (10-K annual reports and
-        DEF 14A proxy statements), date ranges, and company- or state-level
-        filters, using the API's <code>locationCodes</code>, <code>ciks</code>,
-        and date-range parameters to isolate the data each chart
-        needed.
-    </p>
-    <p>
-        Because this API blocks direct requests from a browser (a security
-        measure called CORS), data for every chart on this page was collected
-        using Python scripts run in Google Colab, which queried the API
-        directly, saved the results as small static files, and uploaded those
-        files to this site's GitHub repository. Every chart reads from one of
-        these static files rather than querying SEC's servers live each time a
-        visitor loads the page — a deliberate tradeoff that keeps the page fast
-        and reliable, at the cost of the data not auto-updating after the date
-        it was collected.
-    </p>
-    <p>
-        Two supporting public datasets round out the picture: a full list of
-        S&P 500 companies, their SEC filer identifiers (CIKs), and their GICS
-        sector classifications, pulled from a public, open-license dataset
-        maintained on GitHub (datasets/s-and-p-500-companies); and SEC's
-        bulk company-to-exchange mapping file, used to identify which stock
-        exchange each company is listed on.
-    </p>
-</div>
+                <h2>The Data</h2>
+                <p>
+                    This project draws entirely on live, publicly accessible government and
+                    open-source data — no proprietary datasets or paid APIs were used.
+                </p>
+                <p>
+                    The core source is the SEC's EDGAR full-text search system
+                    (efts.sec.gov), which indexes the complete text of every public company
+                    filing since 2001. I queried this system directly for specific phrases
+                    ("diversity, equity, and inclusion," "DEI," "ESG," "climate risk") across
+                    different filing types (10-K annual reports and DEF 14A proxy
+                    statements), date ranges, and company- or state-level filters, using the
+                    API's <code>locationCodes</code>, <code>ciks</code>, and date-range
+                    parameters to isolate the data each chart needed.
+                </p>
+                <p>
+                    Because this API blocks direct requests from a browser (a security
+                    measure called CORS), data for every chart on this page was collected
+                    using Python scripts run in Google Colab, which queried the API
+                    directly, saved the results as small static files, and uploaded those
+                    files to this site's GitHub repository. Every chart reads from one of
+                    these static files rather than querying SEC's servers live each time a
+                    visitor loads the page — a deliberate tradeoff that keeps the page fast
+                    and reliable, at the cost of the data not auto-updating after the date
+                    it was collected.
+                </p>
+                <p>
+                    Two supporting public datasets round out the picture: a full list of
+                    S&P 500 companies, their SEC filer identifiers (CIKs), and their GICS
+                    sector classifications, pulled from a public, open-license dataset
+                    maintained on GitHub (datasets/s-and-p-500-companies); and SEC's
+                    bulk company-to-exchange mapping file, used to identify which stock
+                    exchange each company is listed on.
+                </p>
+            </div>
         </section>
 
         <section id="charts">
@@ -343,51 +342,50 @@
                 </details>
             </div>
 
-           <div class="chart-block">
-    <p>
-        Curious about a specific company? Search any S&P 500 company below to see
-        its own year-by-year record.
-    </p>
-    <p style="font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">
-        Look Up Any S&P 500 Company
-    </p>
-    <p style="font-size: 0.9rem; color: #5A5A5A; margin-top: 0; margin-bottom: 20px;">
-        Did this company's 10-K mention "diversity, equity, and inclusion" or "DEI" that year?
-    </p>
-    <figure id="chartLocationLookup"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            Same dataset and method as above, shown per company. A company showing
-            "No" in every year may never have used DEI-related language —
-            or may simply have used different wording throughout (e.g. "inclusion
-            and diversity" rather than "diversity, equity, and inclusion"), which
-            this method cannot distinguish.
-        </p>
-    </details>
+            <div class="chart-block">
+                <p>
+                    Curious about a specific company? Search any S&P 500 company below to see
+                    its own year-by-year record.
+                </p>
+                <p style="font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">
+                    Look Up Any S&P 500 Company
+                </p>
+                <p style="font-size: 0.9rem; color: #5A5A5A; margin-top: 0; margin-bottom: 20px;">
+                    Did this company's 10-K mention "diversity, equity, and inclusion" or "DEI" that year?
+                </p>
+                <figure id="chartLocationLookup"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        Same dataset and method as above, shown per company. A company showing
+                        "No" in every year may never have used DEI-related language —
+                        or may simply have used different wording throughout (e.g. "inclusion
+                        and diversity" rather than "diversity, equity, and inclusion"), which
+                        this method cannot distinguish.
+                    </p>
+                </details>
+            </div>
 
-               <div class="chart-block">
-    <p>
-        Every sector retreated, but not equally. Real Estate collapsed almost
-        completely (53.3% to 3.3%), while Communication Services held on the
-        longest — still at 21.1% in 2026, roughly double the rate of every other
-        sector. 
-    </p>
-    <figure id="chartLocationSector"></figure>
-    <details>
-        <summary>Notes for replication</summary>
-        <p>
-            GICS sector classifications for all 500 companies come from the same
-            public S&P 500 dataset used elsewhere in this project
-            (datasets/s-and-p-500-companies on GitHub), joined to the DEI mention
-            data by company name. Percentages reflect the share of each sector's
-            companies whose 10-K mentioned "diversity, equity, and inclusion" or
-            "DEI" that year.
-        </p>
-    </details>
-</div>
-               
-</div>
+            <div class="chart-block">
+                <p>
+                    Every sector retreated, but not equally. Real Estate collapsed almost
+                    completely (53.3% to 3.3%), while Communication Services held on the
+                    longest — still at 21.1% in 2026, roughly double the rate of every other
+                    sector.
+                </p>
+                <figure id="chartLocationSector"></figure>
+                <details>
+                    <summary>Notes for replication</summary>
+                    <p>
+                        GICS sector classifications for all 500 companies come from the same
+                        public S&P 500 dataset used elsewhere in this project
+                        (datasets/s-and-p-500-companies on GitHub), joined to the DEI mention
+                        data by company name. Percentages reflect the share of each sector's
+                        companies whose 10-K mentioned "diversity, equity, and inclusion" or
+                        "DEI" that year.
+                    </p>
+                </details>
+            </div>
 
             <div class="chart-block">
                 <p>
@@ -481,48 +479,101 @@
         </section>
 
         <section id="tools">
-    <h2>Tools</h2>
-    <p>
-        Data collection was done in Python, run in Google Colab notebooks, since SEC's EDGAR API blocks direct requests from a
-        browser (a restriction called CORS) — Colab's Python environment isn't
-        subject to that restriction. Each script used the <code>requests</code>
-        library to query the API directly, with a short retry loop (up to three
-        attempts per request) to handle the occasional server timeout, and
-        saved results as static JSON files for the site to read from later.
-        For the two larger company datasets, scripts also wrote periodic
-        checkpoint files, so a dropped connection partway through a long run
-        (the full S&P 500 pull took roughly 45 minutes) wouldn't mean losing
-        everything already collected.
-    </p>
-    <p>
-        All charts were built in Vega-Lite, a JSON-based charting grammar, and
-        embedded directly into this page with vega-embed. Several charts use
-        Vega-Lite's interactive features beyond a static image: the state map
-        and the company lookup tool both use dropdown parameters that let a
-        reader switch what the chart displays without reloading the page, and
-        the multi-term comparison chart uses hover-based highlighting to
-        isolate one line at a time.
-    </p>
-    <p>
-        A few real challenges came up along the way. SEC's own aggregation
-        features (for breaking results down by state or industry) cap out at
-        the top 30 categories, so state-level data was instead collected by
-        querying each state individually. Company-level full-text search has a
-        real blind spot: a company using different wording than the exact
-        phrases searched for will show up as "no mentions" even if it has
-        active DEI-related language elsewhere — several companies tested
-        throughout this project (Microsoft, Intel, and others) fell into this
-        category and were excluded from charts where that would otherwise
-        mislead. And GitHub Pages, which hosts this site, caches published
-        pages for a period after each update, which occasionally made a
-        genuinely successful upload appear not to have taken effect until the
-        cache cleared.
-    </p>
-</section>
+            <h2>Tools</h2>
+            <p>
+                Data collection was done in Python, run in Google Colab notebooks, since
+                SEC's EDGAR API blocks direct requests from a browser (a restriction
+                called CORS) — Colab's Python environment isn't subject to that
+                restriction. Each script used the <code>requests</code> library to query
+                the API directly, with a short retry loop (up to three attempts per
+                request) to handle the occasional server timeout, and saved results as
+                static JSON files for the site to read from later. For the two larger
+                company datasets, scripts also wrote periodic checkpoint files, so a
+                dropped connection partway through a long run (the full S&P 500 pull took
+                roughly 45 minutes) wouldn't mean losing everything already collected.
+            </p>
+            <p>
+                All charts were built in Vega-Lite, a JSON-based charting grammar, and
+                embedded directly into this page with vega-embed. Several charts use
+                Vega-Lite's interactive features beyond a static image: the state map
+                and the company lookup tool both use dropdown parameters that let a
+                reader switch what the chart displays without reloading the page, and
+                the multi-term comparison chart uses hover-based highlighting to
+                isolate one line at a time.
+            </p>
+            <p>
+                A few real challenges came up along the way. SEC's own aggregation
+                features (for breaking results down by state or industry) cap out at
+                the top 30 categories, so state-level data was instead collected by
+                querying each state individually. Company-level full-text search has a
+                real blind spot: a company using different wording than the exact
+                phrases searched for will show up as "no mentions" even if it has
+                active DEI-related language elsewhere — several companies tested
+                throughout this project (Microsoft, Intel, and others) fell into this
+                category and were excluded from charts where that would otherwise
+                mislead. And GitHub Pages, which hosts this site, caches published
+                pages for a period after each update, which occasionally made a
+                genuinely successful upload appear not to have taken effect until the
+                cache cleared.
+            </p>
+        </section>
 
         <section id="conclusions">
             <h2>Conclusions</h2>
-            <p class="placeholder">[TO WRITE — what the findings mean, limitations, next steps]</p>
+            <p>
+                The scale here is the first thing worth sitting with: across the entire
+                S&P 500, roughly half of companies used DEI-related language in their
+                SEC filings as recently as 2024. By 2026, fewer than 1 in 10 still did.
+                That's not a gradual drift — it's a collapse, and it happened to the
+                largest, most scrutinized companies in the US economy.
+            </p>
+            <p>
+                But the more interesting finding isn't that this happened — it's that
+                what companies said in public didn't always match what they filed with
+                regulators. Apple and Costco were both specifically named in early-2025
+                news coverage as companies standing firm on DEI commitments. Their own
+                SEC filings tell a different story: both quietly dropped the exact
+                legal language around the same time as companies that made no public
+                commitment either way. The gap between corporate messaging and
+                corporate disclosure is a real story this data captures, not just the
+                headline retreat itself.
+            </p>
+            <p>
+                The retreat also wasn't driven by a single actor, which matters for how
+                durable it's likely to be. Trump's executive orders explain part of it
+                — but a federal appeals court, acting on an entirely unrelated legal
+                theory, independently struck down Nasdaq's board diversity rule within
+                weeks of the inauguration, and the collapse in board diversity
+                disclosures that followed was just as dramatic. Two unconnected
+                institutions converged on the same outcome through different
+                mechanisms, which suggests this shift reflects something closer to a
+                genuine change in corporate risk calculus than a reaction to any one
+                administration.
+            </p>
+            <p>
+                The retreat wasn't even, either. Real Estate companies all but
+                abandoned the language (53.3% to 3.3%), while Communication Services
+                held on considerably longer (21.1% still using it in 2026) — a gap too
+                large, across sample sizes of dozens of companies per sector, to be
+                noise. And even the one apparent exception among named companies
+                complicates the obvious reading rather than confirming it: Target still
+                mentions "diversity, equity, and inclusion" in every filing through
+                2026 — but not to describe ongoing initiatives. The phrase now appears
+                almost entirely in risk-factor language explaining the shareholder
+                lawsuits and consumer boycotts triggered by Target's own rollback.
+            </p>
+            <p>
+                This project has real limits. Full-text search detects specific words,
+                not intent, so a company that renamed its program without changing
+                anything structural is indistinguishable here from one that eliminated
+                it outright. Several companies tested throughout this project never
+                used the exact phrases searched for at all, meaning the true scale of
+                retreat is likely understated, not overstated. But what the data does
+                show clearly is that corporate America's retreat from DEI language was
+                faster, more institutionally reinforced, and more disconnected from
+                companies' own public statements than a simple "Trump made them do it"
+                narrative suggests.
+            </p>
         </section>
 
     </main>
@@ -535,7 +586,7 @@
         vegaEmbed('#chartLocationLookup', chartLookup)
 
         let chartSector = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sector.vl.json";
-vegaEmbed('#chartLocationSector', chartSector)
+        vegaEmbed('#chartLocationSector', chartSector)
 
         let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
         vegaEmbed('#chartLocation2', chart2)
