@@ -1,464 +1,398 @@
 [
   {
     "race": "White",
-    "year": "2024",
-    "month": "01",
-    "unemployment_rate": 3.4,
-    "date": "2024-01-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "01",
-    "unemployment_rate": 5.3,
-    "date": "2024-01-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "02",
-    "unemployment_rate": 3.4,
-    "date": "2024-02-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "02",
-    "unemployment_rate": 5.7,
-    "date": "2024-02-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "03",
-    "unemployment_rate": 3.4,
-    "date": "2024-03-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "03",
-    "unemployment_rate": 6.5,
-    "date": "2024-03-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "04",
-    "unemployment_rate": 3.5,
-    "date": "2024-04-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "04",
-    "unemployment_rate": 5.6,
-    "date": "2024-04-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "05",
-    "unemployment_rate": 3.5,
-    "date": "2024-05-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "05",
-    "unemployment_rate": 6.2,
-    "date": "2024-05-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "06",
-    "unemployment_rate": 3.5,
-    "date": "2024-06-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "06",
-    "unemployment_rate": 6.3,
-    "date": "2024-06-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "07",
-    "unemployment_rate": 3.8,
-    "date": "2024-07-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "07",
-    "unemployment_rate": 6.2,
-    "date": "2024-07-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "08",
-    "unemployment_rate": 3.8,
-    "date": "2024-08-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "08",
-    "unemployment_rate": 6.1,
-    "date": "2024-08-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "09",
-    "unemployment_rate": 3.6,
-    "date": "2024-09-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "09",
-    "unemployment_rate": 5.7,
-    "date": "2024-09-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
+    "year": "2026",
     "month": "10",
-    "unemployment_rate": 3.8,
-    "date": "2024-10-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "10",
-    "unemployment_rate": 5.7,
-    "date": "2024-10-01"
+    "unemployment_rate": 3.7
   },
   {
     "race": "White",
-    "year": "2024",
-    "month": "11",
-    "unemployment_rate": 3.8,
-    "date": "2024-11-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "11",
-    "unemployment_rate": 6.3,
-    "date": "2024-11-01"
-  },
-  {
-    "race": "White",
-    "year": "2024",
-    "month": "12",
-    "unemployment_rate": 3.6,
-    "date": "2024-12-01"
-  },
-  {
-    "race": "Black",
-    "year": "2024",
-    "month": "12",
-    "unemployment_rate": 6.1,
-    "date": "2024-12-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "01",
-    "unemployment_rate": 3.5,
-    "date": "2025-01-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "01",
-    "unemployment_rate": 6.2,
-    "date": "2025-01-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "02",
-    "unemployment_rate": 3.8,
-    "date": "2025-02-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "02",
-    "unemployment_rate": 6.0,
-    "date": "2025-02-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "03",
-    "unemployment_rate": 3.7,
-    "date": "2025-03-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "03",
-    "unemployment_rate": 6.2,
-    "date": "2025-03-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "04",
-    "unemployment_rate": 3.8,
-    "date": "2025-04-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "04",
-    "unemployment_rate": 6.4,
-    "date": "2025-04-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "05",
-    "unemployment_rate": 3.8,
-    "date": "2025-05-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "05",
-    "unemployment_rate": 6.1,
-    "date": "2025-05-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "06",
-    "unemployment_rate": 3.6,
-    "date": "2025-06-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "06",
-    "unemployment_rate": 6.9,
-    "date": "2025-06-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "07",
-    "unemployment_rate": 3.7,
-    "date": "2025-07-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "07",
-    "unemployment_rate": 7.2,
-    "date": "2025-07-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
-    "month": "08",
-    "unemployment_rate": 3.7,
-    "date": "2025-08-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "08",
-    "unemployment_rate": 7.6,
-    "date": "2025-08-01"
-  },
-  {
-    "race": "White",
-    "year": "2025",
+    "year": "2026",
     "month": "09",
-    "unemployment_rate": 3.7,
-    "date": "2025-09-01"
-  },
-  {
-    "race": "Black",
-    "year": "2025",
-    "month": "09",
-    "unemployment_rate": 7.6,
-    "date": "2025-09-01"
+    "unemployment_rate": 3.6
   },
   {
     "race": "White",
-    "year": "2025",
-    "month": "11",
-    "unemployment_rate": 3.9,
-    "date": "2025-11-01"
+    "year": "2026",
+    "month": "08",
+    "unemployment_rate": 3.7
   },
   {
-    "race": "Black",
-    "year": "2025",
-    "month": "11",
-    "unemployment_rate": 8.2,
-    "date": "2025-11-01"
+    "race": "White",
+    "year": "2026",
+    "month": "07",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "06",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "05",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "04",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "03",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "02",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2026",
+    "month": "01",
+    "unemployment_rate": 3.7
   },
   {
     "race": "White",
     "year": "2025",
     "month": "12",
-    "unemployment_rate": 3.8,
-    "date": "2025-12-01"
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "11",
+    "unemployment_rate": 3.9
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "09",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "08",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "07",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "06",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "05",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "04",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "03",
+    "unemployment_rate": 3.7
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "02",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2025",
+    "month": "01",
+    "unemployment_rate": 3.5
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "12",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "11",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "10",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "09",
+    "unemployment_rate": 3.6
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "08",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "07",
+    "unemployment_rate": 3.8
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "06",
+    "unemployment_rate": 3.5
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "05",
+    "unemployment_rate": 3.5
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "04",
+    "unemployment_rate": 3.5
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "03",
+    "unemployment_rate": 3.4
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "02",
+    "unemployment_rate": 3.4
+  },
+  {
+    "race": "White",
+    "year": "2024",
+    "month": "01",
+    "unemployment_rate": 3.4
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "10",
+    "unemployment_rate": 6.6
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "09",
+    "unemployment_rate": 7.0
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "08",
+    "unemployment_rate": 6.0
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "07",
+    "unemployment_rate": 6.3
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "06",
+    "unemployment_rate": 6.6
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "05",
+    "unemployment_rate": 6.6
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "04",
+    "unemployment_rate": 7.3
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "03",
+    "unemployment_rate": 7.1
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "02",
+    "unemployment_rate": 7.7
+  },
+  {
+    "race": "Black",
+    "year": "2026",
+    "month": "01",
+    "unemployment_rate": 7.3
   },
   {
     "race": "Black",
     "year": "2025",
     "month": "12",
-    "unemployment_rate": 7.5,
-    "date": "2025-12-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "01",
-    "unemployment_rate": 3.7,
-    "date": "2026-01-01"
+    "unemployment_rate": 7.5
   },
   {
     "race": "Black",
-    "year": "2026",
-    "month": "01",
-    "unemployment_rate": 7.3,
-    "date": "2026-01-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "02",
-    "unemployment_rate": 3.7,
-    "date": "2026-02-01"
+    "year": "2025",
+    "month": "11",
+    "unemployment_rate": 8.2
   },
   {
     "race": "Black",
-    "year": "2026",
-    "month": "02",
-    "unemployment_rate": 7.7,
-    "date": "2026-02-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "03",
-    "unemployment_rate": 3.6,
-    "date": "2026-03-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "03",
-    "unemployment_rate": 7.1,
-    "date": "2026-03-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "04",
-    "unemployment_rate": 3.7,
-    "date": "2026-04-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "04",
-    "unemployment_rate": 7.3,
-    "date": "2026-04-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "05",
-    "unemployment_rate": 3.8,
-    "date": "2026-05-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "05",
-    "unemployment_rate": 6.6,
-    "date": "2026-05-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "06",
-    "unemployment_rate": 3.6,
-    "date": "2026-06-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "06",
-    "unemployment_rate": 6.6,
-    "date": "2026-06-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "07",
-    "unemployment_rate": 3.6,
-    "date": "2026-07-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "07",
-    "unemployment_rate": 6.3,
-    "date": "2026-07-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "08",
-    "unemployment_rate": 3.7,
-    "date": "2026-08-01"
-  },
-  {
-    "race": "Black",
-    "year": "2026",
-    "month": "08",
-    "unemployment_rate": 6.0,
-    "date": "2026-08-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
+    "year": "2025",
     "month": "09",
-    "unemployment_rate": 3.6,
-    "date": "2026-09-01"
+    "unemployment_rate": 7.6
   },
   {
     "race": "Black",
-    "year": "2026",
+    "year": "2025",
+    "month": "08",
+    "unemployment_rate": 7.6
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "07",
+    "unemployment_rate": 7.2
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "06",
+    "unemployment_rate": 6.9
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "05",
+    "unemployment_rate": 6.1
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "04",
+    "unemployment_rate": 6.4
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "03",
+    "unemployment_rate": 6.2
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "02",
+    "unemployment_rate": 6.0
+  },
+  {
+    "race": "Black",
+    "year": "2025",
+    "month": "01",
+    "unemployment_rate": 6.2
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "12",
+    "unemployment_rate": 6.1
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "11",
+    "unemployment_rate": 6.3
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "10",
+    "unemployment_rate": 5.7
+  },
+  {
+    "race": "Black",
+    "year": "2024",
     "month": "09",
-    "unemployment_rate": 7.0,
-    "date": "2026-09-01"
-  },
-  {
-    "race": "White",
-    "year": "2026",
-    "month": "10",
-    "unemployment_rate": 3.7,
-    "date": "2026-10-01"
+    "unemployment_rate": 5.7
   },
   {
     "race": "Black",
-    "year": "2026",
-    "month": "10",
-    "unemployment_rate": 6.6,
-    "date": "2026-10-01"
+    "year": "2024",
+    "month": "08",
+    "unemployment_rate": 6.1
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "07",
+    "unemployment_rate": 6.2
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "06",
+    "unemployment_rate": 6.3
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "05",
+    "unemployment_rate": 6.2
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "04",
+    "unemployment_rate": 5.6
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "03",
+    "unemployment_rate": 6.5
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "02",
+    "unemployment_rate": 5.7
+  },
+  {
+    "race": "Black",
+    "year": "2024",
+    "month": "01",
+    "unemployment_rate": 5.3
   }
 ]
