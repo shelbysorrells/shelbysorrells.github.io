@@ -258,6 +258,32 @@
         <figure id="Location13"></figure>
     </div>
 </section>
+
+ <section class="challenge">
+    <div class="challenge__num" aria-hidden="true">09</div>
+    <div class="challenge__body">
+        <h1>CC9: Interactive Charts</h1>
+
+        <div class="chart-description">
+            <h3>Chart 1: Top 10 CO2-Emitting Countries by Year</h3>
+            <p>
+                A slider lets you drag through 1990-2023 to see which countries
+                emitted the most CO2 in any given year, using Our World in Data's
+                CO2 and Greenhouse Gas Emissions dataset.
+            </p>
+        </div>
+        <figure id="Location14"></figure>
+
+        <div class="chart-description">
+            <h3>Chart 2: Look Up Any Country's CO2 Emissions</h3>
+            <p>
+                A dropdown lets you pick any of 220 countries to see its own CO2
+                emissions trend from 1990 to 2023, from the same dataset.
+            </p>
+        </div>
+        <figure id="Location15"></figure>
+    </div>
+</section>
  
     <script>
  
@@ -299,6 +325,12 @@ vegaEmbed('#Location12', chart12)
 
 let chart13 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc7_choropleth_map.vl.json";
 vegaEmbed('#Location13', chart13)
+
+     let chart14 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc9_chart_slider.vl.json";
+vegaEmbed('#Location14', chart14)
+
+let chart15 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/cc9_chart_dropdown.vl.json";
+vegaEmbed('#Location15', chart15)
  
     </script>
 </body>
