@@ -1,13 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 140,
-  "padding": {
-    "top": 25,
-    "left": 5,
-    "right": 5,
-    "bottom": 0
-  },
+  "height": 180,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -16,7 +10,7 @@
   "params": [
     {
       "name": "company_select",
-      "value": "Target",
+      "value": "3M",
       "bind": {
         "input": "select",
         "options": [
@@ -535,7 +529,9 @@
   ],
   "mark": {
     "type": "square",
-    "size": 1500
+    "size": 1500,
+    "stroke": "#F7F7F8",
+    "strokeWidth": 1.5
   },
   "encoding": {
     "x": {
@@ -546,10 +542,6 @@
         "labelAngle": 0,
         "orient": "top",
         "offset": 2
-      },
-      "scale": {
-        "paddingInner": 0.1,
-        "paddingOuter": 0.1
       }
     },
     "color": {
