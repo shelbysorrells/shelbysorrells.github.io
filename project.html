@@ -47,6 +47,29 @@
             font-style: italic;
         }
 
+        .stat-callout {
+            margin: 0 0 24px 0;
+            padding: 4px 0;
+        }
+
+        .stat-callout .big-number {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1B3A57;
+            line-height: 1;
+        }
+
+        .stat-callout .context {
+            font-size: 1.1rem;
+            color: #2A2A2A;
+            margin-left: 4px;
+        }
+
+        .stat-callout .context strong {
+            color: #1A1A1A;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -323,6 +346,9 @@
         <section id="charts">
 
             <div class="chart-block">
+                <div class="stat-callout">
+                    <span class="big-number">8.8%</span><span class="context"> of S&P 500 companies mentioned DEI language in 2026 — down from <strong>46.2%</strong> in 2022.</span>
+                </div>
                 <p>
                     Across the full S&P 500, roughly half of companies' 10-Ks mentioned
                     "diversity, equity, and inclusion" or "DEI" every year from 2022 through
@@ -368,6 +394,9 @@
             </div>
 
             <div class="chart-block">
+                <div class="stat-callout">
+                    <span class="big-number">53.3%→3.3%</span><span class="context"> — Real Estate's near-total collapse in DEI language, the steepest of any sector.</span>
+                </div>
                 <p>
                     Every sector retreated, but not equally. Real Estate collapsed almost
                     completely (53.3% to 3.3%), while Communication Services held on the
@@ -526,7 +555,7 @@
                 isolate one line at a time.
             </p>
             <p>
-                A few real challenges came up along the way. SEC's own aggregation
+                A few challenges came up along the way. SEC's aggregation
                 features (for breaking results down by state or industry) cap out at
                 the top 30 categories, so state-level data was instead collected by
                 querying each state individually. Company-level full-text search has a
@@ -545,14 +574,14 @@
         <section id="conclusions">
             <h2>Conclusions</h2>
             <p>
-                The scale here is the first thing worth sitting with: across the entire
+                Across the entire
                 S&P 500, roughly half of companies used DEI-related language in their
                 SEC filings as recently as 2024. By 2026, fewer than 1 in 10 still did.
                 That's not a gradual drift — it's a collapse, and it happened to the
                 largest, most scrutinized companies in the US economy.
             </p>
             <p>
-                But the more interesting finding isn't that this happened — it's that
+                But the more interesting finding is that
                 what companies said in public didn't always match what they filed with
                 regulators. Apple and Costco were both specifically named in early-2025
                 news coverage as companies standing firm on DEI commitments. Their own
