@@ -24,6 +24,10 @@
         "labels": ["Q1 2024", "Q1 2026", "% Change"],
         "name": "View: "
       }
+    },
+    {
+      "name": "state_hover",
+      "select": {"type": "point", "fields": ["state"], "on": "pointerover", "clear": "pointerout"}
     }
   ],
   "data": {
@@ -86,6 +90,10 @@
       "type": "quantitative",
       "scale": {"scheme": "oranges"},
       "legend": {"title": "Selected value (see dropdown)"}
+    },
+    "opacity": {
+      "condition": {"param": "state_hover", "value": 1},
+      "value": 0.3
     },
     "tooltip": [
       {"field": "state", "type": "nominal", "title": "State"},
