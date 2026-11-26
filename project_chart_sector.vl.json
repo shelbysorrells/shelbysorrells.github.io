@@ -15,6 +15,12 @@
   "padding": {"top": 10, "left": 5, "right": 20, "bottom": 5},
   "autosize": {"type": "fit", "contains": "padding"},
   "background": "#F7F7F8",
+  "params": [
+    {
+      "name": "sector_hover",
+      "select": {"type": "point", "fields": ["sector"], "on": "pointerover", "clear": "pointerout"}
+    }
+  ],
   "data": {
     "url": "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/dei_by_sector.json"
   },
@@ -47,7 +53,11 @@
       {"field": "year", "type": "nominal", "title": "Year"},
       {"field": "pct_mentioning", "type": "quantitative", "title": "% mentioning"},
       {"field": "n_companies", "type": "quantitative", "title": "Companies in sector"}
-    ]
+    ],
+    "opacity": {
+      "condition": {"param": "sector_hover", "value": 1},
+      "value": 0.3
+    }
   },
   "mark": {"type": "bar"},
   "config": {
