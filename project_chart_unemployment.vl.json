@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "US Unemployment Rate by Race, 2024-2026",
-    "subtitle": "Monthly rate by race/ethnicity; use the dropdown to change the axis starting point",
+    "subtitle": "Monthly rate by race/ethnicity. Hover over a line to highlight it.",
     "anchor": "start",
     "font": "Merriweather, serif",
     "fontSize": 16,
@@ -16,14 +16,8 @@
   "background": "#F7F7F8",
   "params": [
     {
-      "name": "y_min_select",
-      "value": 2,
-      "bind": {
-        "input": "select",
-        "options": [0, 2],
-        "labels": ["Start at 0%", "Start at 2% (shows differences more clearly)"],
-        "name": "Y-axis: "
-      }
+      "name": "race_hover",
+      "select": {"type": "point", "fields": ["race"], "on": "pointerover", "clear": "pointerout"}
     }
   ],
   "data": {
@@ -41,7 +35,7 @@
       "field": "unemployment_rate",
       "type": "quantitative",
       "title": "Unemployment rate (%)",
-      "scale": {"domainMin": {"expr": "y_min_select"}, "domainMax": 9}
+      "scale": {"domain": [0, 9]}
     },
     "color": {
       "field": "race",
@@ -51,6 +45,10 @@
         "range": ["#AAAAAA", "#7A9CBF", "#6B8E7F", "#C9A227", "#9A3B00"]
       },
       "legend": {"title": null, "orient": "top", "direction": "horizontal", "columns": 3}
+    },
+    "opacity": {
+      "condition": {"param": "race_hover", "value": 1},
+      "value": 0.25
     },
     "tooltip": [
       {"field": "race", "type": "nominal", "title": "Group"},
