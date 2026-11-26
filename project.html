@@ -614,27 +614,51 @@
     </main>
 
     <script>
-        let chart1 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sp500_overview.vl.json";
-        vegaEmbed('#chartLocation1', chart1)
+    function embedChart(selector, spec) {
+        var frame = document.querySelector(selector);
+        if (!frame || !spec || typeof vegaEmbed === 'undefined') return;
+        var fontsReady = (document.fonts && document.fonts.load)
+          ? Promise.all([
+              document.fonts.load('400 12px Inter'),
+              document.fonts.load('600 12px Inter'),
+              document.fonts.load('400 12px Merriweather'),
+              document.fonts.load('700 12px Merriweather')
+            ]).catch(function () {})
+          : Promise.resolve();
+        fontsReady.then(function () {
+            return vegaEmbed(selector, spec, {
+                actions: false,
+                renderer: 'svg',
+                config: {
+                    font: 'Inter',
+                    title: { font: 'Merriweather', subtitleFont: 'Inter' },
+                    legend: { labelFont: 'Inter', titleFont: 'Merriweather' },
+                    axis: { labelFont: 'Inter', titleFont: 'Inter' }
+                }
+            });
+        }).then(function (res) {
+            fitSvg(frame);
+        }).catch(function (err) {
+            frame.innerHTML = '<p style="font-style: italic; color: #8A8A8A;">This chart could not load.</p>';
+            console.error(err);
+        });
+    }
 
-        let chartLookup = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_lookup.vl.json";
-        vegaEmbed('#chartLocationLookup', chartLookup)
+    function fitSvg(frame) {
+        var svg = frame.querySelector('svg');
+        if (!svg || svg.getAttribute('viewBox')) return;
+        var w = parseFloat(svg.getAttribute('width')), h = parseFloat(svg.getAttribute('height'));
+        if (w && h) svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    }
 
-        let chartSector = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sector.vl.json";
-        vegaEmbed('#chartLocationSector', chartSector)
-
-        let chart2 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json";
-        vegaEmbed('#chartLocation2', chart2)
-
-        let chart3 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json";
-        vegaEmbed('#chartLocation3', chart3)
-
-        let chart4 = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json";
-        vegaEmbed('#chartLocation4', chart4)
-
-        let chartUnemployment = "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_unemployment.vl.json";
-        vegaEmbed('#chartLocationUnemployment', chartUnemployment)
-    </script>
+    embedChart('#chartLocation1', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sp500_overview.vl.json");
+    embedChart('#chartLocationLookup', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_lookup.vl.json");
+    embedChart('#chartLocationSector', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_sector.vl.json");
+    embedChart('#chartLocation2', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart2.vl.json");
+    embedChart('#chartLocation3', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart3.vl.json");
+    embedChart('#chartLocation4', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart4.vl.json");
+    embedChart('#chartLocationUnemployment', "https://raw.githubusercontent.com/shelbysorrells/shelbysorrells.github.io/refs/heads/main/project_chart_unemployment.vl.json");
+</script>
 
 </body>
 </html>
